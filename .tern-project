@@ -1,0 +1,17 @@
+{
+  "ecmaVersion": "5",
+  "libs": [
+    "jquery",
+    "browser"
+  ],
+  "loadEagerly": [],
+  "dontLoad": [
+    "node_module/**"
+  ],
+  "plugins": {
+    "doc_comment": true,
+    "complete_strings": {
+      "maxLength": 15
+    }
+  }
+}
