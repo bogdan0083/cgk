@@ -43,6 +43,15 @@ $(document).ready(function () {
     type: 'sync'
   }, onSvgDrawEnd).play();
 
+  // js tabs
+
+  $('.js-tab-link').click(function (e) {
+    e.preventDefault();
+    var $tabParent = $(this).parent();
+    $tabParent.children().removeClass('active');
+    $(this).addClass('active');
+  });
+
   function onSvgDrawEnd() {
     $('.promo-svg svg').addClass('finished');
   }

@@ -171,7 +171,7 @@
 
 /* start services */
 .services
-  padding: 30px 0 10px
+  padding: 30px 0 60px
   text-align: center
   .container
     max-width: 1500px
@@ -267,3 +267,140 @@
     .text
       color: #de0c14
 /* end services */
+
+/* start steps */
+.steps
+  text-align: center
+  padding: 10px 30px
+  background-color: #ededed
+  +rmin($screen-sm)
+    background: url(../images/steps-bg.jpg) center / cover
+    .container
+      max-width: 800px
+  +rmin($screen-md)
+    .container
+      max-width: 1500px
+      width: auto
+.steps-item
+  width: 240px
+  display: inline-block
+  vertical-align: top
+  margin: 40px 10px
+  position: relative
+  .icon
+    display: block
+    width: 35px
+    height: 35px
+    margin: 0 auto
+    position: relative
+    img
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+  &:last-child:before
+    display: none
+  &:before
+    content: ''
+    width: 45px
+    height: 7px
+    background-image: url(../images/arr-thin-right.png)
+    position: absolute
+    right: -40px
+    top: 14px
+    display: none
+  h4
+    font-size: 21px
+    line-height: 1.19
+    margin-bottom: 6px
+    font-weight: 400
+    margin-top: 10px
+  p
+    font-size: 18px
+    line-height: 1.33
+    line-height: 1.4
+    margin-top: 0
+    color: #2a2a2a
+  .step-num
+    font-size: 10px
+    color: #ed1c24
+    margin-top: 20px
+    +exo(500)
+  +rmin($screen-sm)
+    min-height: 220px
+    margin-left: 20px
+    margin-right: 20px
+    width: 230px
+    .step-num
+      position: absolute
+      width: 100%
+      text-align: center
+      left: 0
+      bottom: 0
+  +rmin($screen-md)
+    &:before
+      display: block
+/* end steps */
+
+/* start packages */
+.packages
+  text-align: center
+  padding: 30px 0
+  &-types
+    background-color: #f7f7f7
+    padding: 26px 0
+    position: relative
+    +clr()
+  &-tabs
+    +rmin($screen-sm)
+      display: inline-block
+      width: 50%
+      margin-right: -4px
+.package
+  &-type
+    float: left
+    vertical-align: top
+    width: 50%
+    float: left
+    margin: 20px 0
+    text-align: center
+    padding: 0
+    background-color: transparent
+    padding-top: 33px
+    position: relative
+    border: none
+    color: #949494
+    transition: all 0.3s
+    cursor: pointer
+    &:focus
+      outline: none
+    &:hover
+      color: black
+    &.active
+      color: #000
+      &:before
+        border: 6px solid white
+      &:after
+        border: 2px solid #ed1c24
+    &:before, &:after
+      content: ''
+      transition: all 0.3s
+      top: 0
+      width: 24px
+      height: 24px
+      left: 50%
+      margin-left: -12px
+      padding: 0
+      position: absolute
+      border: 12px solid white
+      background-color: #f10c28
+      box-sizing: border-box
+      border-radius: 50%
+    &:after
+      border: 1px solid #959595
+      background: none
+      transition: border 0.1s
+    +rmin($screen-sm)
+      font-size: 17px
+/* end packages */

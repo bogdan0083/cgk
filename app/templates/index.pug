@@ -69,7 +69,7 @@ block content
             data-aos-duration="600" data-aos-delay="1200")
   // end promo
   // start services
-  .services
+  section.services
     .container
       h2.section-heading(data-aos="fade-up" data-aos-anchor=".services" 
             data-aos-duration="600" data-aos-delay="200") Услуги
@@ -85,3 +85,72 @@ block content
               .circle
           - n++
   // end services
+  // start steps
+  section.steps 
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="200") Как мы работаем
+      .steps-group
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="400")
+          .icon
+            img(src="images/step-icon1.png")
+          h4 Принимаем заявку
+          p и выясняем цель оформления документов
+          span.step-num 01
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="500")
+          .icon
+            img(src="images/step-icon2.png")
+          h4 Анализируем
+          p представленные Вами документы, реестры и фактическое использование объекта
+          span.step-num 02
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="700")
+          .icon
+            img(src="images/step-icon3.png")
+          h4 Согласовываем
+          p стоимость и алгоритм работ
+          span.step-num 03
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="900")
+          .icon
+            img(src="images/step-icon4.png")
+          h4 Подготавливаем
+          p необходимый пакет документов согласно выбранному порядку
+          span.step-num 04
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" data-aos-offset="100"
+            data-aos-duration="600" data-aos-delay="1100")
+          .icon
+            img(src="images/step-icon5.png")
+          h4 Передаем заказчику           p положительный результат проекта в соответствии с поставленными задачами
+          span.step-num 05
+  // end steps
+  // start packages
+  section.packages
+    .container
+      h2.section-heading(data-aos="fade" data-aos-anchor=".packages" data-aos-offset="100"
+      data-aos-duration="600" data-aos-delay="200") Мы предлагаем Вам #[br] готовые пакеты услуг
+    .packages-group
+  
+      .packages-tabs.js-tabs
+        .packages-types(data-aos="fade-up" data-aos-offset="100" data-aos-duration="800" data-aos-delay="100")
+          .frame(data-aos="zoom-in" data-aos-anchor=".packages-types" data-aos-duration="600" data-aos-delay="400")
+          button.package-type.js-tab-link Премиум
+          button.package-type.js-tab-link Базовый
+          button.package-type.js-tab-link.active Стандарт
+          button.package-type.js-tab-link Все включено
+        .packages-tabs-slider(data-aos="fade-up" data-aos-anchor=".packages" data-aos-offset="100" data-aos-duration="600" data-aos-delay="1200")
+          .slide
+            .package-details
+              h3
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Геодезическая съемка
+                li
+                  span Подготовка межевого плана
+                li
+                  span Согласование границ
+  // end packages

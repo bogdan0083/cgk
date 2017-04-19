@@ -1,0 +1,21 @@
+html	/media/bogdan/d/projects/new/app/sass/_common.sass	/^html$/;"	function	line:6
+body	/media/bogdan/d/projects/new/app/sass/_common.sass	/^body$/;"	function	line:15
+a	/media/bogdan/d/projects/new/app/sass/_common.sass	/^a$/;"	function	line:24
+img	/media/bogdan/d/projects/new/app/sass/_common.sass	/^img$/;"	function	line:29
+.out	/media/bogdan/d/projects/new/app/sass/_common.sass	/^.out$/;"	function	line:35
+onSvgDrawEnd	/home/bogdan/projects/new/app/scripts/main.js	/^  function onSvgDrawEnd() {$/;"	function	line:17
+.header	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^.header$/;"	function	line:1
+p	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^  p$/;"	function	line:5
+img	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    img$/;"	function	line:17
+.logo	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^  .logo$/;"	function	line:30
+.inner	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    .inner$/;"	function	line:58
+a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:60
+.left	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    .left$/;"	function	line:79
+.right	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    .right$/;"	function	line:81
+a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^      a$/;"	function	line:84
+.inner	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    .inner$/;"	function	line:126
+a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:129
+.block	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.block$/;"	function	line:1
+.promo	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.promo$/;"	function	line:4
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:13
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^        path$/;"	function	line:16
