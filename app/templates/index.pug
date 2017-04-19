@@ -2,7 +2,86 @@
 extends layouts/_layout
 block head
   - var title = 'Main page'
+  - var n = 0
+  - var servicesTextArr = ['Технический <br/> план', 'Межевой<br/>план', 'Акт<br/> обследования', 'Выписки<br/> из ЕГРН', 'Геодезическая<br/> съемка и обмеры', 'Схема расположения<br/>земельного участка', 'Исправление<br/> реестровых ошибок', 'Проектная<br/> документация', ' Кадастровый учет<br/> и регистрация прав', 'Юридические<br/> услуги']
 block content
-  h1 Index page
-  h2 asd
-  +icon('heart')
+  // start promo
+  .promo
+    .container
+      .promo-svg
+        include data/target.svg
+      .promo-wrapper 
+      .promo-logo
+        img(data-aos="fade-up" data-aos-anchor=".promo" 
+            data-aos-duration="1200" src="/images/logo-text.png" alt="Цгк - Центр Геодезии и кадастра")
+        p.promo-logo-caption(data-aos-anchor=".promo" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200") цель. гарантия. качество
+      .promo-stand(data-aos="fade-in" data-aos-anchor=".promo" 
+            data-aos-duration="600" data-aos-delay="1600")
+        img(src="images/geo.png")
+      .promo-content
+        h1(data-aos="fade-up" data-aos-anchor=".promo" 
+            data-aos-duration="700" data-aos-delay="2000")
+          | Центр 
+          br
+          | Геодезии
+          br
+          | и Кадастра
+        a.button.popup-link(href="#popup-call" data-aos="fade-up" data-aos-anchor=".promo" 
+            data-aos-duration="700" data-aos-delay="2200") 
+          span Заказать звонок
+          span.icon
+            include data/phone.svg
+        a.button.popup-link(href="#popup-order" data-aos="fade-up" data-aos-anchor=".promo" 
+            data-aos-duration="700" data-aos-delay="2400")
+          span Оставить заявку
+          span.icon
+            include data/envelope.svg
+      .services-promo-slider(data-aos="fade-in" data-aos-anchor=".promo" 
+            data-aos-duration="700" data-aos-delay="3000")
+        .navigation
+          a.active(href="#" role="button")
+            span 01
+          a(href="#" role="button")
+            span 02
+          a(href="#" role="button")
+            span 03
+          a(href="#" role="button")
+            span 04
+          a(href="#" role="button")
+            span 05
+        .wrapper
+          .slide
+              span.gray.text-first Кадастровые работы
+              span.text-second в кратчайшие сроки
+          .slide
+              span.text-first Еще один слайд
+              span.text-second с анимацией
+          .slide
+              span.text-first 3-ий слайд
+              span.text-second Вау!
+          .slide
+              span.text-first 4-ий слайд
+              span.text-second Вау!
+          .slide
+              span.text-first 5-ий слайд
+              span.text-second Вау!
+    .ground(data-aos="fade-up" data-aos-anchor=".promo" 
+            data-aos-duration="600" data-aos-delay="1200")
+  // end promo
+  // start services
+  .services
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-anchor=".services" 
+            data-aos-duration="600" data-aos-delay="200") Услуги
+      p(data-aos="fade-up" data-aos-anchor=".services" 
+            data-aos-duration="600" data-aos-delay="500") #[span.color-red Лучшие цены и минимальные сроки] – ключевое преимущество нашей компании
+      .services-group
+        while n < 10 
+          a.service-item(href="#" data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="600" data-aos-delay=(n * 300))
+            .icon
+              img(src='images/service-icon' + (n + 1) +'.png')
+            p.text!= servicesTextArr[n]
+            .arr-icon
+              .circle
+          - n++
+  // end services

@@ -1,0 +1,147 @@
+.header
+  padding-top: 10px
+  padding-bottom: 20px
+  +rmin($screen-sm)
+    padding-top: 30px
+  p
+    margin: 0
+  &-center
+    float: left
+    +rmin($screen-sm)
+      display: none
+  &-left, &-right
+    clear: both
+    text-align: center
+    margin: 10px 0
+    +rmin($screen-sm)
+      clear: none
+  .icon-marker
+    display: none
+    +rmin($screen-sm)
+      display: block
+      margin-bottom: 10px
+  &-left
+    padding-top: 10px
+    opacity: .5
+    +rmin($screen-sm)
+      float: left
+  &-right
+    +rmin($screen-sm)
+      float: right
+      text-align: right
+      padding-top: 10px
+  .logo
+    max-width: 70px
+  .mobile-trigger-wrap
+    margin-top: 12px
+    position: relative
+    z-index: 101
+  .header-mail
+    color: $color-red
+    text-decoration: none
+    display: block
+    margin-top: -6px
+    transition: all 0.3s
+    &:hover
+      color: black
+  .header-phone
+    font-size: 24px
+    text-decoration: none
+    transition: all 0.3s
+    +exo(600)
+    &:hover
+      color: $color-red
+  +rmin($screen-sm)
+    .mobile-trigger-wrap
+      display: none
+
+.main-nav
+  clear: both
+  z-index: 80
+  position: relative
+  +rmin($screen-sm)
+    .inner
+      +clr()
+    a
+      text-decoration: none
+      transition: all 0.3s
+      padding: 20px 40px 20px 0
+      display: inline-block
+      position: relative
+      font-size: 15px
+      &:last-child:after
+        display: none
+      &:after
+        content: ''
+        position: absolute
+        right: 20px
+        top: 50%
+        background-color: #e1e1e1
+        width: 1px
+        height: 16px
+        margin-top: -8px
+      &:hover
+        color: $color-red
+    .left
+      float: left
+    .right
+      float: right
+      text-align: right
+      a
+        padding-right: 0
+        padding-left: 40px
+        &:after
+          right: auto
+          left: 20px
+        &:first-child:after
+            display: none
+        &:last-child:after
+          display: block
+    .left, .right
+      position: relative
+      &:before
+        content: ''
+        top: 0
+        left: -102px
+        background-color: #e6e6e6
+        position: absolute
+        width: 425px
+        height: 1px
+        +rmin($screen-md)
+          left: -53px
+    .right:before
+      left: auto
+      right: -102px
+  +rmin($screen-md)
+    a
+      font-size: 18px
+  +r($screen-sm)
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 100
+    width: 100%
+    height: 100%
+    background-color: rgba(black, 0.8)
+    color: white
+    text-align: center
+    display: table
+    opacity: 1
+    visibility: hidden
+    opacity: 0
+    transition: visibility 0.3s, opacity 0.3s 0.1s
+    &.active
+      transition: visibility 0.3s, opacity 0.3s 0.1s
+      visibility: visible
+      opacity: 1
+    .inner
+      display: table-cell
+      vertical-align: middle
+    a
+      font-weight: 600
+      font-size: 20px
+      display: block
+      text-decoration: none
+      padding: 20px 0
+      text-transform: uppercase
+      +exo(600)

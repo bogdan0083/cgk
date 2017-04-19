@@ -1,5 +1,8 @@
 +font('Calibri Custom', 'calibri-webfont')
 
+// variables
+$color-red: #de0c14
+
 html
   box-sizing: border-box
   +rmin($screen-sm)
@@ -13,10 +16,11 @@ body
   background: #FFF
   line-height: 1.4
   color: black
-  font-size: 16px
+  font-size: 36px
   font-family: Calibri, 'Calibri Custom', Arial
+  font-size: 15px
   +rmin($screen-sm)
-    font-size: 15px
+    font-size: 17px
 a
   color: inherit
   &:hover
@@ -26,10 +30,65 @@ img
   max-width: 100%
 
 h1, h2, h3, h4, h5, h6
-    +exo(700)
+    +exo(600)
+
+.color-red
+  color: #de0c14
+
+.section-heading
+  font-size: 24px
+  font-weight: 600s
+  line-height: 1.3
+  color: #010101
+  margin-bottom: 24px
+  +rmin($screen-sm)
+    font-size: 39px  
+.out
+  overflow: hidden
+  position: relative
 /* forbid focusing elements inside slides */
 .slick-slide,
 .slick-slide a,
 .slick-slide img
   &:focus
     outline: none
+
+.mobile-trigger-wrap
+  display: inline-block
+  float: right
+
+.mobile-trigger
+  +burger(30px, 3px, 6px, #f10c28)
+  &.active
+    +burger-to-cross()
+
+/* start button-styles */
+.button
+  height: 51px
+  line-height: 46px
+  display: inline-block
+  border-radius: 30px
+  border: 1px solid #919191
+  width: 252px
+  text-decoration: none
+  background-color: transparent
+  margin: 5px 0
+  font-size: 17px
+  font-weight: 400
+  text-align: center
+  transition: all 0.3s
+  color: #252525
+  &:hover
+    color: #f10c28
+    border-color: #f10c28
+  span
+    vertical-align: middle
+  .icon
+    width: 20px
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+    margin-right: -10px
+    svg
+      display: block
+/* end button-styles */

@@ -1,2 +1,269 @@
 .block
   display: flex
+
+.promo
+  position: relative
+  text-align: center
+  padding: 10px 0 20px
+  .container
+    position: relative
+  +rmin($screen-sm)
+    min-height: 600px
+  +rmin($screen-md)
+    min-height: 950px
+  &-svg
+    position: absolute
+    left: 50%
+    transform: translateX(-74.7%)
+    top: -128px
+    width: 1000px
+    // height: 764px
+    display: none
+    +rmin($screen-sm)
+      display: block
+    +rmin($screen-md)
+      display: block
+      top: -212px
+      width: 1321px
+    svg
+      display: block
+      width: 100%
+      path
+        stroke: #f10c28
+        stroke-width: 1px
+        fill: transparent !important
+      &.finished
+        path
+          transition: all 0.3s
+          fill: #f10c28 !important
+          stroke: transparent !important
+  &-logo
+    transition: all 0.3s 0.3s
+    +rmin($screen-sm)
+      margin-top: 30px
+    &-caption
+      transition: all 0.3s 0.5s
+      font-size: 13px
+      text-transform: uppercase
+      margin-top: 2px
+      opacity: .6
+  &-stand
+    max-width: 260px
+    margin: 10px auto 0
+    display: none
+    +rmin($screen-sm)
+      display: block
+      position: relative
+      z-index: 10
+      left: -25px
+    +rmin($screen-md)
+      max-width: 100%
+      left: -40px
+      margin-top: 34px
+  &-content
+    padding: 10px 0
+    position: relative
+    .button
+      display: block
+      margin: 8px auto
+    +rmin($screen-sm)
+      position: absolute
+      text-align: left
+      top: 156px
+      right: 0
+    +rmin($screen-md)
+      top: 180px
+      .button
+        margin-left: 0
+        margin-right: 0
+    h1
+      font-size: 35px
+      font-weight: 600
+      margin-top: 0
+      text-transform: uppercase
+      line-height: 1.25
+      +rmin($screen-sm)
+        font-size: 42px
+      +rmin($screen-md)
+        font-size: 55px
+  .ground
+    height: 272px
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    opacity: .6
+    background: url(../images/graphic.jpg) no-repeat center
+    display: none
+    +rmin($screen-md)
+      display: block
+
+.services-promo-slider
+  max-width: 300px
+  margin: 0 auto
+  width: 100%
+  position: relative
+  z-index: 10
+  text-align: center
+  +rmin($screen-sm)
+    text-align: left
+    position: absolute
+    left: 0
+    top: 280px
+  +rmin($screen-md)
+    top: 300px
+  .navigation
+    +exo(500)
+    font-size: 10px
+    margin-bottom: 20px
+    a
+      display: inline-block
+      text-decoration: none
+      color: #7b7b7b
+      transition: color 0.6s
+      padding: 6px
+      padding-left: 0
+      vertical-align: middle
+      margin-left: 4px
+      margin-right: 4px
+      +rmin($screen-sm)
+        display: block
+      &:hover
+        color: black
+      &:before
+        content: ''
+        width: 22px
+        height: 1px
+        background-color: #000000
+        display: inline-block
+        vertical-align: middle
+        margin-top: -3px !important
+        width: 0
+        margin-right: 0
+        transition: all 0.3s
+      &.active
+        font-size: 20px
+        color: black
+        padding-top: 5px
+        padding-bottom: 5px
+        &:before
+          width: 10px
+          margin-right: 10px
+  .slide
+    padding-bottom: 20px
+    span
+      display: block
+      opacity: 0
+      font-size: 18px
+      transition: all 0.3s
+      transform: translateY(10px)
+      &.gray
+        color: #2e2e2e
+    &.slick-active
+      .text-first, .text-second
+        transition: all 0.3s
+        opacity: 1
+        transform: none
+      .text-first
+        transition-delay: 0.1s
+      .text-second
+        transition-delay: 0.4s
+
+/* start services */
+.services
+  padding: 30px 0 10px
+  text-align: center
+  .container
+    max-width: 1500px
+    width: auto
+
+.service-item
+  display: inline-block
+  vertical-align: top
+  margin: 30px 10px 0
+  width: 240px
+  padding-bottom: 60px
+  text-decoration: none
+  width: 190px
+  +rmin($screen-sm)
+    width: 240px
+    margin-left: 20px
+    margin-right: 20px
+  .arr-icon
+    width: 30px
+    height: 30px
+    position: absolute
+    bottom: 30px
+    left: 50%
+    margin-left: -15px
+    &:after, &:before
+      content: ''
+      width: 5px
+      height: 8px
+      background-image: url(../images/arr-right.png)
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      transition: all 0.3s
+      z-index: 1
+    &:before
+      opacity: 1
+    &:after
+      opacity: 0
+      background-image: url(../images/arr-right-hover.png)
+    .circle
+      box-shadow: 0 5px 2px rgba(234, 234, 234, 0.55)
+      border: 1px solid #bdbdbd
+      background-color: #ffffff
+      transition: all 0.3s
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      position: absolute
+      left: 0
+      top: 0
+  .text
+    font-size: 16px
+    font-weight: 300
+    line-height: 1.2
+    transition: color 0.3s
+    +rmin($screen-sm)
+      font-size: 21px
+  .icon
+    width: 121px
+    height: 121px
+    margin: 0 auto 24px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%
+      background-color: #f10c28
+      transition: all 0.3s
+      border-radius: 50%
+    img
+      position: absolute
+      margin: auto
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+  &:hover
+    .arr-icon:before
+      opacity: 0
+    .arr-icon:after
+      opacity: 1
+    .circle
+      border: 1px solid #f21e38
+      transform: scale(1.2)
+    .icon:before
+      transform: scale(1.1)
+    .text
+      color: #de0c14
+/* end services */
