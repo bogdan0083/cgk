@@ -68,9 +68,6 @@ gulp.task('styles-dist', () => {
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({stream: true}));
 });
@@ -190,7 +187,7 @@ gulp.task('serve', () => {
 
     gulp.watch('app/templates/**/*.pug', ['templates']);
     gulp.watch('app/sass/**/*.sass', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/scripts/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });

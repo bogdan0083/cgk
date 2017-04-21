@@ -98,6 +98,47 @@
     +rmin($screen-md)
       display: block
 
+.navigation, .showcase-navigation
+  +exo(500)
+  font-size: 10px
+  margin-bottom: 20px
+  text-align: center
+  +rmin($screen-sm)
+    text-align: left
+  a
+    display: inline-block
+    text-decoration: none
+    color: #7b7b7b
+    transition: color 0.6s
+    padding: 6px
+    padding-left: 0
+    vertical-align: middle
+    margin-left: 4px
+    margin-right: 4px
+    +rmin($screen-sm)
+      display: block
+    &:hover
+      color: black
+    &:before
+      content: ''
+      width: 22px
+      height: 1px
+      background-color: #000000
+      display: inline-block
+      vertical-align: middle
+      margin-top: -3px !important
+      width: 0
+      margin-right: 0
+      transition: all 0.3s
+    &.active
+      font-size: 20px
+      color: black
+      padding-top: 5px
+      padding-bottom: 5px
+      &:before
+        width: 10px
+        margin-right: 10px
+
 .services-promo-slider
   max-width: 300px
   margin: 0 auto
@@ -112,43 +153,6 @@
     top: 280px
   +rmin($screen-md)
     top: 300px
-  .navigation
-    +exo(500)
-    font-size: 10px
-    margin-bottom: 20px
-    a
-      display: inline-block
-      text-decoration: none
-      color: #7b7b7b
-      transition: color 0.6s
-      padding: 6px
-      padding-left: 0
-      vertical-align: middle
-      margin-left: 4px
-      margin-right: 4px
-      +rmin($screen-sm)
-        display: block
-      &:hover
-        color: black
-      &:before
-        content: ''
-        width: 22px
-        height: 1px
-        background-color: #000000
-        display: inline-block
-        vertical-align: middle
-        margin-top: -3px !important
-        width: 0
-        margin-right: 0
-        transition: all 0.3s
-      &.active
-        font-size: 20px
-        color: black
-        padding-top: 5px
-        padding-bottom: 5px
-        &:before
-          width: 10px
-          margin-right: 10px
   .slide
     padding-bottom: 20px
     span
@@ -346,17 +350,57 @@
 /* start packages */
 .packages
   text-align: center
-  padding: 30px 0
+  padding: 30px 0 40px
+  .section-heading
+    margin-bottom: 50px
   &-types
     background-color: #f7f7f7
-    padding: 26px 0
+    padding: 6px 0
     position: relative
+    +rmin($screen-sm)
+      padding-top: 26px
+      padding-bottom: 26px
+    +rmin($screen-md)
+      .wrapper
+        max-width: 560px
+        margin: 0 auto
     +clr()
+    .frame
+      position: absolute
+      width: 123px
+      height: 142px
+      background-image: url(../images/frame.png)
+      top: -14px
+      left: 0
+      display: none
+      z-index: 10
+      +rmin($screen-sm)
+        display: block
   &-tabs
+    padding: 30px 0
     +rmin($screen-sm)
       display: inline-block
       width: 50%
+      vertical-align: top
       margin-right: -4px
+      padding: 0
+    +rmin($screen-md)
+      &:nth-child(1)
+        .packages-types .wrapper,
+        .packages-tabs-slider
+          float: right
+          width: 100%
+          padding-right: 80px
+      &:nth-child(2)
+        .packages-types .wrapper,
+        .packages-tabs-slider
+          float: left
+          width: 100%
+          padding-left: 40px
+  &-tabs-slider
+    +rmin($screen-md)
+      max-width: 580px
+      margin: 0 auto
 .package
   &-type
     float: left
@@ -373,6 +417,10 @@
     color: #949494
     transition: all 0.3s
     cursor: pointer
+    +rmin($screen-sm)
+      width: 25%
+      margin-top: 0
+      margin-bottom: 0
     &:focus
       outline: none
     &:hover
@@ -402,5 +450,261 @@
       background: none
       transition: border 0.1s
     +rmin($screen-sm)
+      font-size: 15px
+  &-details
+    padding-top: 20px
+    +rmin($screen-md)
+      text-align: left
+    h3
+      +exo(400)
+      font-size: 23px
+      color: #010101
+      transition: all 0.3s 0.3s
+      +rmin($screen-sm)
+        text-align: left
+        padding-left: 20px
+        font-size: 23px
+      +rmin($screen-md)
+        padding-left: 48px
+  &-list
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      font-size: 18px
+      text-align: left
+      font-weight: 300
+      padding: 6px 0
+      +rmin($screen-md)
+        padding-left: 34px
+      &:nth-child(2n+1)
+        background-color: #fdf0f1
+      span
+        padding: 0 30px 0 50px
+        text-align: center
+        position: relative
+        transition: all 0.3s
+        &:before
+          content: ''
+          position: absolute
+          left: 20px
+          top: 50%
+          margin-top: -5px
+          width: 10px
+          height: 10px
+          background-image: url(../images/check.png)
+  &-price-block
+    width: 290px
+    height: 50px
+    line-height: 48px
+    border: 1px solid #bdbdbd
+    border-radius: 30px
+    margin-top: 40px
+    font-size: 15px
+    text-align: center
+    margin: 40px auto 0
+    display: inline-block
+    text-decoration: none
+    position: relative
+    transition: all 0.3s
+    +rmin($screen-md)
+      margin-left: 48px
+      margin-right: auto
+    &:hover
+      border-color: $color-red
+      &:before
+        transition-delay: 0.3s
+        opacity: 1
+        transform: none
+      .package-price,
+      .package-period
+        transition-delay: 0s
+        opacity: 0
+        transform: translateY(10px)
+    &:before
+      content: 'Заказать'
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      text-align: center
+      width: 100%
       font-size: 17px
+      line-height: 48px
+      color: $color-red
+      transition: all 0.3s
+      opacity: 0
+      transform: translateY(-10px)
+    +rmin($screen-sm)
+      width: 300px
+      margin-left: 0
+      margin-right: 0
+  &-price, &-period
+    transition: all 0.3s 0.3s
+    display: inline-block
+  &-price
+    color: $color-red
+    padding-right: 24px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      top: 50%
+      width: 1px
+      height: 16px
+      margin-top: -8px
+      background-color: #d9d9d9
+  &-period
+    padding-left: 24px
+    color: #6d6d6d
 /* end packages */
+
+/* start projects */
+.projects
+  background-color: #272727
+  color: white
+  text-align: center
+  position: relative
+  +rmin($screen-md)
+    text-align: left
+    display: table
+    width: 100%
+  &-images
+    position: relative
+    height: 400px
+    +rmin($screen-md)
+      height: 100%
+      width: 30%
+      display: table-cell
+    +rmin(1000px)
+      width: 50%
+  &-image
+    display: none
+    width: 100%
+    height: 100%
+    position: absolute
+    &.active
+      display: block
+  .section-heading
+    color: #ed1c24
+    margin-bottom: 10px
+    line-height: 1
+    padding-bottom: 20px
+    position: relative
+    &:before
+      content: ''
+      left: 50%
+      width: 50px
+      margin-left: -25px
+      height: 3px
+      background-color: #767676
+      bottom: 0
+      position: absolute
+      +rmin($screen-md)
+        left: 0
+        margin-left: 0
+    +rmin($screen-sm)
+      padding-top: 30px
+    +rmin($screen-md)
+      font-size: 47px
+      padding-bottom: 40px
+      margin-bottom: 40px
+  &-showcase
+    padding-left: 10px
+    padding-right: 10px
+    position: relative
+    padding-top: 40px
+    max-width: 600px
+    margin: 0 auto
+    +rmin($screen-sm)
+      margin: 0 auto
+      padding-top: 70px
+    +rmin($screen-md)
+      display: table-cell
+      padding: 0 100px 0 30px
+      .inner
+        max-width: 510px
+        float: left
+    +rmin(1250px)
+      padding-left: 130px
+  &-name
+    font-size: 21px
+    line-height: 1.15
+    font-family: Calibri, 'Calibri Custom', sans-serif
+    font-weight: 400
+    margin-bottom: 6px
+  .text
+    line-height: 1.5
+    font-size: 18px
+    opacity: .7
+    font-weight: 300
+  &-address
+    font-weight: 300
+    font-size: 18px
+    margin-top: 0
+    font-weight: 300
+    color: #dbdbdb
+    position: relative
+    +rmin($screen-md)
+      &:before
+        content: ''
+        width: 11px
+        height: 15px
+        background-image: url(../images/marker.svg)
+        position: absolute
+        left: -20px
+        top: 50%
+        margin-top: -7px
+  &-circles
+    padding: 10px 0
+    border-top: 1px solid #313131
+    margin-top: 70px
+  .showcase-navigation
+    +rmin($screen-sm)
+      position: absolute
+      left: auto
+      right: 0
+      top: 20px
+    +rmin($screen-md)
+      left: auto
+      right: 30px
+    a:before
+      background-color: #7d7d7d
+    a
+      color: #7d7d7d
+    a.active
+      color: white
+  .button
+    margin-top: 40px
+.projects-circle
+  position: relative
+  width: 65px
+  height: 65px
+  display: inline-block
+  margin: 20px 6px
+  opacity: 0
+  transition: all 0.6s
+  transform: translateX(10px)
+  &.active
+    opacity: 1
+    transform: none
+  .wrap
+    position: absolute
+    width: 100%
+    height: 100%
+    text-align: center
+    padding-top: 18px
+    top: 0
+    left: 0
+  .num, .caption
+    display: block
+  .num
+    font-size: 12px
+    color: $color-red
+  .caption
+    opacity: .7
+    font-size: 10px
+    position: relative
+    top: -2px
+/* end projects */
