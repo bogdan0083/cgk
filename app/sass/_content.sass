@@ -991,6 +991,9 @@
     top: 0
     width: 100%
     height: 100%
+  &-large
+    +rmin($screen-md)
+      height: 670px
 /* end map-wrapper */
 
 /* start worktypes */
@@ -1024,3 +1027,322 @@
         margin-top: -63px
 
 /* end worktypes */
+
+.layout
+  &-popups
+    min-height: 1000px
+  &-contact
+    padding-top: 20px
+/* start popup-styles */
+.popup
+  max-width: 910px
+  position: relative
+  background-color: white
+  margin: 10px auto 0
+  &-success
+    .popup-header
+      padding-bottom: 24px
+    .popup-content
+      text-align: center
+      margin: 0 auto
+      h4
+        font-size: 19px
+        font-weight: 400
+        margin-bottom: 10px
+        margin-top: 0
+        +rmin($screen-sm)
+          font-size: 26px
+      p
+        font-size: 17px
+        line-height: 1.2
+        font-weight: 300
+        opacity: .9
+        margin: 0
+        +rmin($screen-sm)
+          font-size: 21px
+  +r(767px)
+    h4
+      font-size: 18px
+    p
+      font-size: 15px
+      span
+        display: block
+  +r(767px)
+    width: 95%
+  &-close
+    position: absolute
+    top: 19px
+    right: 22px
+    z-index: 4
+    width: 16px
+    height: 16px
+    background-color: transparent
+    padding: 0
+    border: none
+    cursor: pointer
+    transition: all 0.3s
+    &:focus
+      outline: none
+    &:hover:before
+      opacity: 0
+    &:hover:after
+      opacity: 1
+    &:before, &:after
+      content: ''
+      opacity: 1
+      background: url(../images/cross.png) no-repeat center
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      transition: all 0.3s
+      position: absolute
+    &:after
+      opacity: 0
+      background-image: url(../images/cross-white.png)
+  &:focus
+    outline: none
+  &:hover
+    opacity: 1
+  &-header
+    background-color: #b70d13
+    color: white
+    text-align: center
+    padding: 20px 10px 20px
+    h3
+      color: white
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 0
+      margin-top: 0
+      +exo(600)
+      +rmin($screen-sm)
+        font-size: 39px
+    p
+      font-size: 15px
+      font-weight: 400
+      max-width: 550px
+      margin: 4px auto
+      span
+        font-weight: 700
+        margin-left: 4px
+      +rmin($screen-sm)
+        font-size: 19px
+  &-content
+    padding-top: 20px
+    padding-bottom: 30px
+    padding-left: 15px
+    padding-right: 15px
+    +rmin($screen-sm)
+      padding: 36px 10px 58px
+  &-form
+    max-width: 720px
+    margin: 0 auto
+    .row
+      margin-left: -5px
+      margin-right: -5px
+      > div
+        padding-left: 5px
+        padding-right: 5px
+    &-bottom
+      margin-top: 20px
+      text-align: center
+      position: relative
+      .button
+        display: block
+        margin: 0 auto
+    &-caption
+      display: block
+      margin-bottom: 20px
+      font-size: 18px
+      color: rgba(#232323, .6)
+      display: inline-block
+      position: relative
+      &:before
+        content: '*'
+        position: absolute
+        top: 0
+        left: -12px
+        color: #b70d13
+        font-size: 16px
+
+/* start input-block */
+.input-block
+    width: 100%
+    border: 1px solid #d6d6d6
+    box-sizing: border-box
+    border-radius: 5px
+    position: relative
+    font-size: 15px
+    margin: 5px 0
+    display: table
+    +r(767px)
+        border: none
+        margin: 16px 0
+    span
+        position: relative
+        display: table-cell
+        vertical-align: top
+        width: 1%
+        white-space: nowrap
+        box-sizing: content-box
+        left: 20px
+        top: 0
+        color: #2a3341
+        height: 52px
+        line-height: 53px
+        font-size: 18px
+        padding-right: 20px
+        z-index: 1
+        .required
+            font-size: 16px
+            font-style: normal
+            color: #b70d13
+            margin-left: 4px
+        &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 11px
+            height: 30px
+            width: 1px
+            background-color: #b3b3b3
+        +r(767px)
+            position: static
+            display: block
+            margin-bottom: 8px
+            height: auto
+            line-height: 1
+            width: 100%
+            &:after
+                display: none
+    +r(767px)
+        border: none
+    input, textarea
+        height: 52px
+        border: none
+        display: table-cell
+        vertical-align: top
+        width: 100%
+        box-sizing: border-box
+        font-size: 15px
+        padding-right: 16px
+        padding-left: 30px
+        border-radius: 20px
+        background-color: transparent
+        &:focus
+            outline: none
+        +r(767px)
+            border: 1px solid #b2b2b2
+            border-radius: 5px
+            padding-left: 16px
+            font-size: 14px
+            display: block
+    textarea
+        resize: none
+        vertical-align: top
+        height: 108px
+        padding-top: 17px
+        +r(767px)
+            padding-top: 8px
+/* end input-block */
+
+.contact-inner
+  text-align: center
+  padding-bottom: 40px
+  .container
+    max-width: 1400px
+    width: 100%
+  .button
+    .icon
+      margin-top: -1px
+      img
+        transition: all 0.3s
+    &.active
+      img
+        transform: rotate(180deg)
+.contact-group
+  text-align: center
+  padding-bottom: 30px
+  position: relative
+.contact-item
+  display: inline-block
+  margin: 30px 0
+  text-align: center
+  text-decoration: none
+  text-align: center
+  +rmin($screen-sm)
+    margin: 10px 0
+  h3
+    font-size: 23px
+    font-weight: 400
+    line-height: 1.2
+    font-weight: 400
+    transition: color 0.3s
+    +rmin($screen-sm)
+      font-size: 21px
+  .icon
+    width: 60px
+    height: 60px
+    position: relative
+    background-color: #f10c28
+    transition: all 0.3s
+    border-radius: 50%
+    margin: 0 auto
+    svg
+      position: absolute
+      margin: auto
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      path
+        fill: white
+  h3
+    font-size: 23px
+    font-weight: 400
+    padding-bottom: 20px
+    margin-top: 16px
+    position: relative
+    &:after
+      content: ''
+      width: 100px
+      height: 1px
+      background-color: #d6d6d6
+      position: absolute
+      left: 50%
+      bottom: 0
+      margin-left: -50px
+  p
+    font-size: 18px
+    margin-top: 4px
+    margin-bottom: 4px
+
+.mail
+  color: #de0c14
+  text-decoration: none
+
+/* start requisites */
+.requisites
+  padding: 30px 0 20px
+  text-align: center
+  position: relative
+  display: none
+  &:before
+    content: ''
+    position: absolute
+    width: 1300px
+    height: 1px
+    margin-left: -650px
+    left: 50%
+    top: 0
+    background-color: #d4d4d4
+  &-list
+    padding: 0
+    list-style: none
+    max-width: 290px
+    margin: 0 auto
+    li
+      margin: 12px 0
+      line-height: 1.4
+/* end requisites */

@@ -1,5 +1,5 @@
 .header
-  padding-top: 10px
+  padding-top: 16px
   padding-bottom: 20px
   +rmin($screen-sm)
     padding-top: 10px
@@ -20,12 +20,37 @@
         display: block
         font-size: 12px
         opacity: .56
+  &-inner
+    border-bottom: 1px solid #e6e6e6
+    +rmin($screen-sm)
+      padding-bottom: 0
+    .header-center
+      +rmin($screen-sm)
+        display: block
+        text-transform: uppercase
+        width: 80px
+        text-align: center
+        margin-left: -40px
+        top: 16px
+        .logo
+          margin: 0 auto
+        .logo-caption
+          margin-top: 2px
+          display: none
+      +rmin($screen-md)
+        width: 230px
+        margin-left: -115px
+        top: 23px
+        .logo-caption
+          display: block
   &-left, &-right
     clear: both
     text-align: center
     margin: 10px 0
     +rmin($screen-sm)
       clear: none
+      max-width: 320px
+      width: 100%
   .icon-marker
     display: none
     +rmin($screen-sm)
@@ -39,12 +64,12 @@
     +rmin($screen-sm)
       float: left
   &-right
-    position: relative
     z-index: 2
     +rmin($screen-sm)
       float: right
       text-align: right
       padding-top: 10px
+      position: relative
   .logo
     max-width: 70px
     +rmin($screen-sm)
@@ -61,6 +86,27 @@
     transition: all 0.3s
     &:hover
       color: black
+  .popup-icons
+    position: absolute
+    right: 60px
+    top: 3px
+    text-align: center
+    margin: 10px 0
+    .popup-icon
+      +rmin($screen-sm)
+        width: 40px
+        height: 40px
+      +rmin($screen-md)
+        width: 50px
+        height: 50px
+    +rmin($screen-sm)
+      right: auto
+      top: 10px
+      left: 16px
+      text-align: left
+    +rmin($screen-md)
+      left: -40px
+      top: 1px
   .header-phone
     font-size: 24px
     text-decoration: none
@@ -82,10 +128,14 @@
     a
       text-decoration: none
       transition: all 0.3s
-      padding: 20px 40px 20px 0
+      padding: 14px 40px 20px 0
       display: inline-block
       position: relative
       font-size: 15px
+      &.active
+        color: #ed1c24
+        cursor: default
+        pointer-events: none
       &:last-child:after
         display: none
       &:after
@@ -162,3 +212,23 @@
       padding: 20px 0
       text-transform: uppercase
       +exo(600)
+
+.popup-icon
+  border: 1px solid #d9d9d9
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  position: relative
+  transition: all 0.3s
+  display: inline-block
+  margin-left: 3px
+  margin-right: 3px
+  &:hover
+    border-color: $color-red
+  svg
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0

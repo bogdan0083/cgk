@@ -1,0 +1,16 @@
+- var navLeft = ['О компании', 'Наши услуги и цены']
+- var navRight = ['Полезная информация', 'Контакты']
+nav.main-nav
+  .inner
+    .left
+      for item, idx in navLeft
+        if (active == idx)
+          a.active(href="#") #{item}
+        else
+          a(href="#") #{item}
+    .right
+      for item, idx in navRight
+        if (active == (idx + 2))
+          a.active(href="#") #{item}
+        else
+          a(href="#") #{item}

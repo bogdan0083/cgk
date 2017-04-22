@@ -1,5 +1,5 @@
 //BEGIN header
-header.header
+header.header(class=headerInner ? 'header-inner' : '')
   .container
       a.header-center(href="#")
         .logo
@@ -12,15 +12,14 @@ header.header
           img.icon-marker(src="images/marker.svg" alt="Маркер")
           p г. Москва, #[span Фрунзенская набережная, д .8]
       .header-right
+        if (headerInner)
+          .popup-icons
+            a.popup-link.popup-icon(href="#popup-call")
+              include ../data/envelope.svg
+            a.popup-link.popup-icon(href="#popup-callback")
+              include ../data/phone.svg
         .header-contact-left
           a.header-mail(href="mailto:info@cntgeo.ru") info@cntgeo.ru
           a.header-phone(href="phoneto:+7(495)6438588") +7 (495) 643 85 88  
-      nav.main-nav
-        .inner
-          .left
-            a(href="") О компании
-            a(href="") Наши услуги и цены
-          .right
-            a(href="") Полезная информация
-            a(href="") Контакты
+      include nav
 //END header

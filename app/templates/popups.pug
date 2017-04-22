@@ -1,13 +1,138 @@
 //- title: Index Page
-extends layouts/_layout-inner
+extends layouts/_layout
 block head
   - var title = 'Popups'
   - var n = 0
   - var i = 0
   - var servicesTextArr = ['Технический <br/> план', 'Межевой<br/>план', 'Акт<br/> обследования', 'Выписки<br/> из ЕГРН', 'Геодезическая<br/> съемка и обмеры', 'Схема расположения<br/>земельного участка', 'Исправление<br/> реестровых ошибок', 'Проектная<br/> документация', ' Кадастровый учет<br/> и регистрация прав', 'Юридические<br/> услуги']
   - var worktypesTextArr = ['Земельные <br/> участки', 'Здания <br/> и сооружения', 'Нежилые <br/> помещения', 'Квартиры <br/> и комнаты',  'Юридические <br/> услуги']
+block header
+  - var headerInner = true
 block content
   // start layout
   .layout.layout-popups
-    h1 Попапы
+    .container
+      h1 Попапы
+      ul
+        li: a.popup-link(href="#popup-call") Обратная связь
+        li: a.popup-link(href="#popup-callback") Обратный звонок
+        li: a.popup-link(href="#popup-order") Оставить заявку
+        li: a.popup-link(href="#popup-success") Благодарности
+    // start popup order
+    #popup-order.popup.popup-order.mfp-with-anim.mfp-hide
+      button.popup-close(onclick='$.magnificPopup.close()')
+      .popup-header
+        h3 Оставить заявку
+        p Оставьте заявку или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+      .popup-content
+        form.popup-form
+          .row
+            .col-xs-12.col-sm-12.col-md-12
+              .input-block
+                span
+                  | ФИО
+                  i.required *
+                input(type='text' name="user-fio")
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block.input-block-mail
+                span 
+                  | E-mail
+                  i.required *
+                input(type='text' name="user-email")
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block
+                span
+                  | Телефон 
+                input(type='text')
+            .col-xs-12.col-sm-12.col-md-12
+              .input-block.input-block-textarea
+                span
+                  | Сообщение 
+                  i.required *
+                textarea(name="user-message")
+          .popup-form-bottom
+            span.popup-form-caption
+              | Обязательные поля для заполнения
+            button.button
+              span Оставить заявку
+              span.icon
+                include data/envelope.svg
+    // start popup order
+    // start popup call
+    #popup-call.popup.popup-call.mfp-with-anim.mfp-hide
+      button.popup-close(onclick='$.magnificPopup.close()')
+      .popup-header
+        h3 Обратная связь
+        p Напишите нам или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+      .popup-content
+        form.popup-form
+          .row
+            .col-xs-12.col-sm-12.col-md-12
+              .input-block
+                span
+                  | ФИО
+                  i.required *
+                input(type='text' name="user-fio")
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block.input-block-mail
+                span 
+                  | E-mail
+                  i.required *
+                input(type='text' name="user-email")
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block
+                span
+                  | Телефон 
+                input(type='text')
+            .col-xs-12.col-sm-12.col-md-12
+              .input-block.input-block-textarea
+                span
+                  | Сообщение 
+                  i.required *
+                textarea(name="user-message")
+          .popup-form-bottom
+            span.popup-form-caption
+              | Обязательные поля для заполнения
+            button.button.button-text-centered
+              span Отправить
+              span.icon
+                include data/envelope.svg
+    // start popup call
+    // start popup success
+    #popup-success.popup.popup-success.mfp-with-anim.mfp-hide
+      button.popup-close(onclick='$.magnificPopup.close()')
+      .popup-header
+        h3 Спасибо!
+      .popup-content
+          h4 Ваша заявка успешно отправлена
+          p Наши менеджеры свяжутся с Вами в ближайшее время
+    // start popup success
+    // start popup callback
+    #popup-callback.popup.popup-callback.mfp-with-anim.mfp-hide
+      button.popup-close(onclick='$.magnificPopup.close()')
+      .popup-header
+        h3 Обратный звонок
+        p Оставьте заявку или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+      .popup-content
+        form.popup-form
+          .row
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block
+                span
+                  | ФИО
+                  i.required *
+                input(type='text' name="user-fio")
+            .col-xs-12.col-sm-6.col-md-6
+              .input-block
+                span
+                  | Телефон 
+                input(type='text')
+          .popup-form-bottom
+            span.popup-form-caption
+              | Обязательные поля для заполнения
+            button.button.button-text-centered
+              span Жду звонка
+              span.icon
+                include data/phone.svg
+    // start popup callback
   // end layout
