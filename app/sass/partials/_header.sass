@@ -2,13 +2,24 @@
   padding-top: 10px
   padding-bottom: 20px
   +rmin($screen-sm)
-    padding-top: 30px
+    padding-top: 10px
   p
     margin: 0
   &-center
     float: left
-    +rmin($screen-sm)
+    text-decoration: none
+    .logo-caption
       display: none
+    +rmin($screen-sm)
+      width: 126px
+      display: none
+      position: absolute
+      left: 50%
+      margin-left: -63px
+      .logo-caption
+        display: block
+        font-size: 12px
+        opacity: .56
   &-left, &-right
     clear: both
     text-align: center
@@ -23,15 +34,21 @@
   &-left
     padding-top: 10px
     opacity: .5
+    position: relative
+    z-index: 2
     +rmin($screen-sm)
       float: left
   &-right
+    position: relative
+    z-index: 2
     +rmin($screen-sm)
       float: right
       text-align: right
       padding-top: 10px
   .logo
     max-width: 70px
+    +rmin($screen-sm)
+      max-width: 126px
   .mobile-trigger-wrap
     margin-top: 12px
     position: relative

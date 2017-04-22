@@ -78,34 +78,126 @@ h1, h2, h3, h4, h5, h6
   text-align: center
   transition: all 0.3s
   color: #252525
+  svg
+    path
+      transition: all 0.3s
   &:hover
-    color: #f10c28
     border-color: #f10c28
+    transition: all 0.3s !important
+    span
+      color: #f10c28
   &-dark
     width: 292px
     color: #898989
     border-color: #313131
     opacity: 1
     background-color: #292929
-    &:hover
-      color: white
-      svg path
-        fill: white
     .icon
       margin-left: 12px
     svg
       path
         transition: all 0.3s
         fill: #898989
-
+    &:hover
+      span
+        color: white
+      svg path
+        fill: white
+  &-white
+    width: 252px
+    color: white
+    border-color: white
+    opacity: 1
+    background-color: #ba0017
+    .icon
+      margin-left: 12px
+    svg
+      path
+        transition: all 0.3s
+        fill: white
+    &:hover
+      background-color: white
+      span
+        color: $color-red
+      svg path
+        fill: $color-red
+  &-red
+    border-color: #ed1c24
+    span
+      color: #db0008
+    &:hover
+      background-color: #f10c28
+      span
+        color: white
+      svg path
+        fill: white
   span
-    vertical-align: middle
+    vertical-align: bottom
+    transition: all 0.3s
   .icon
     width: 20px
     display: inline-block
     vertical-align: middle
-    margin-left: 10px
-    margin-right: -10px
+    margin-left: 14px
+    margin-right: -20px
     svg
       display: block
 /* end button-styles */
+
+/* start input-centered */
+
+.input-wrap
+  position: relative
+  margin: 10px 0
+  .js-input-placeholder
+    transition: all 0.3s
+    position: absolute
+    line-height: 0
+    height: 100%
+    padding-top: 21px
+    vertical-align: middle
+    top: 0
+    width: 100%
+    font-size: 18px
+    span
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        right: -12px
+        top: 4px
+        background-color: #ff4e59
+        border-radius: 50%
+        width: 5px
+        height: 5px
+    &.hidden
+      opacity: 0
+      transform: translateY(-10px)
+  &-textarea
+    .js-input-placeholder
+      padding-top: 45px
+.input-centered
+  background-color: transparent
+  text-align: center
+  width: 100%
+  display: block
+  color: white
+  border: none
+  border-bottom: 1px solid rgba(white, .3)
+  height: 44px
+  z-index: 2
+  position: relative
+  transition: all 0.3s
+  padding-left: 10px
+  padding-right: 10px
+  font-size: 18px
+  &:focus
+    outline: none
+  &:hover, &:focus
+    border-color: white
+  &-textarea
+    height: 110px
+    padding-top: 36px
+    padding-bottom: 10px
+    resize: none
+/* end input-centered */

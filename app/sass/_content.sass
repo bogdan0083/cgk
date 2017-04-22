@@ -39,8 +39,10 @@
           stroke: transparent !important
   &-logo
     transition: all 0.3s 0.3s
+    display: none
     +rmin($screen-sm)
       margin-top: 30px
+      display: block
     &-caption
       transition: all 0.3s 0.5s
       font-size: 13px
@@ -54,7 +56,7 @@
     +rmin($screen-sm)
       display: block
       position: relative
-      z-index: 10
+      z-index: 1
       left: -25px
     +rmin($screen-md)
       max-width: 100%
@@ -63,6 +65,7 @@
   &-content
     padding: 10px 0
     position: relative
+    z-index: 2
     .button
       display: block
       margin: 8px auto
@@ -103,6 +106,8 @@
   font-size: 10px
   margin-bottom: 20px
   text-align: center
+  &:focus
+    outline: none
   +rmin($screen-sm)
     text-align: left
   a
@@ -175,16 +180,19 @@
 
 /* start services */
 .services
-  padding: 30px 0 60px
+  padding: 20px 0 60px
   text-align: center
+  +rmin($screen-md)
+    padding-top: 0
   .container
     max-width: 1500px
     width: auto
 
-.service-item
+.service-item, .worktypes-item
   display: inline-block
   vertical-align: top
   margin: 30px 10px 0
+  text-align: center
   width: 240px
   padding-bottom: 60px
   text-decoration: none
@@ -231,7 +239,7 @@
       top: 0
   .text
     font-size: 16px
-    font-weight: 300
+    font-weight: 400
     line-height: 1.2
     transition: color 0.3s
     +rmin($screen-sm)
@@ -270,6 +278,7 @@
       transform: scale(1.1)
     .text
       color: #de0c14
+
 /* end services */
 
 /* start steps */
@@ -279,6 +288,9 @@
   background-color: #ededed
   +rmin($screen-sm)
     background: url(../images/steps-bg.jpg) center / cover
+    padding-top: 40px
+    padding-bottom: 60px
+
     .container
       max-width: 800px
   +rmin($screen-md)
@@ -351,6 +363,8 @@
 .packages
   text-align: center
   padding: 30px 0 40px
+  +rmin($screen-sm)
+    padding-bottom: 80px
   .section-heading
     margin-bottom: 50px
   &-types
@@ -473,7 +487,7 @@
     li
       font-size: 18px
       text-align: left
-      font-weight: 300
+      font-weight: 400
       padding: 6px 0
       +rmin($screen-md)
         padding-left: 34px
@@ -513,7 +527,7 @@
     &:hover
       border-color: $color-red
       &:before
-        transition-delay: 0.3s
+        transition-delay: 0.1s
         opacity: 1
         transform: none
       .package-price,
@@ -540,7 +554,7 @@
       margin-left: 0
       margin-right: 0
   &-price, &-period
-    transition: all 0.3s 0.3s
+    transition: all 0.3s 0.1s
     display: inline-block
   &-price
     color: $color-red
@@ -566,26 +580,49 @@
   color: white
   text-align: center
   position: relative
+  +clr()
   +rmin($screen-md)
     text-align: left
     display: table
     width: 100%
+    &:before
+      content: ''
+      position: absolute
+      bottom: 131px
+      width: 100%
+      left: 0
+      background-color: #313131
+      height: 1px
   &-images
     position: relative
     height: 400px
+    overflow: hidden
     +rmin($screen-md)
       height: 100%
       width: 30%
       display: table-cell
     +rmin(1000px)
       width: 50%
+  .image-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &.first
+      z-index: 20 !important
+    &.second
+      z-index: 19 !important
+    &.active
+      transition: all 1s
+      transform: scale(1.2)
+      opacity: 0
   &-image
-    display: none
     width: 100%
     height: 100%
     position: absolute
-    &.active
-      display: block
+    left: 0
+    top: 0
   .section-heading
     color: #ed1c24
     margin-bottom: 10px
@@ -602,13 +639,14 @@
       bottom: 0
       position: absolute
       +rmin($screen-md)
-        left: 0
+        left: 20px
         margin-left: 0
     +rmin($screen-sm)
       padding-top: 30px
     +rmin($screen-md)
       font-size: 47px
       padding-bottom: 40px
+      padding-left: 20px
       margin-bottom: 40px
   &-showcase
     padding-left: 10px
@@ -619,33 +657,58 @@
     margin: 0 auto
     +rmin($screen-sm)
       margin: 0 auto
-      padding-top: 70px
     +rmin($screen-md)
       display: table-cell
       padding: 0 100px 0 30px
+      text-align: left
       .inner
         max-width: 510px
         float: left
     +rmin(1250px)
-      padding-left: 130px
+      padding-left: 110px
   &-name
     font-size: 21px
     line-height: 1.15
     font-family: Calibri, 'Calibri Custom', sans-serif
     font-weight: 400
     margin-bottom: 6px
+  .slide
+    &.slick-active
+      .projects-name
+        transition-delay: 0.3s
+      .projects-address
+        transition-delay: 0.6s
+      .text
+        transition-delay: 0.9s
+        opacity: .7
+        transform: none
+      .button
+        transition-delay: 1.2s
+      .projects-address, .projects-name, .button
+        opacity: 1
+        z-index: 200
+        transform: none
+    +rmin($screen-md)
+      padding-left: 20px
+  .text, .projects-address, .projects-name, .button
+    transition: all 0.4s
+    opacity: 0
+    transform: translateX(20px)
   .text
     line-height: 1.5
     font-size: 18px
-    opacity: .7
-    font-weight: 300
+    opacity: 0
+    font-weight: 400
+    +rmin($screen-md)
+      min-height: 210px
   &-address
-    font-weight: 300
+    font-weight: 400
     font-size: 18px
     margin-top: 0
-    font-weight: 300
+    font-weight: 400
     color: #dbdbdb
     position: relative
+    display: block
     +rmin($screen-md)
       &:before
         content: ''
@@ -658,16 +721,16 @@
         margin-top: -7px
   &-circles
     padding: 10px 0
-    border-top: 1px solid #313131
-    margin-top: 70px
+    position: relative
+    +rmin($screen-md)
+      margin-top: 70px
   .showcase-navigation
-    +rmin($screen-sm)
+    margin: 0 auto
+    text-align: center
+    +rmin($screen-md)
       position: absolute
       left: auto
-      right: 0
-      top: 20px
-    +rmin($screen-md)
-      left: auto
+      top: 76px
       right: 30px
     a:before
       background-color: #7d7d7d
@@ -677,6 +740,8 @@
       color: white
   .button
     margin-top: 40px
+    .icon
+      margin-top: -4px
 .projects-circle
   position: relative
   width: 65px
@@ -684,10 +749,15 @@
   display: inline-block
   margin: 20px 6px
   opacity: 0
-  transition: all 0.6s
+  transition: all 0.2s
   transform: translateX(10px)
+  canvas
+    position: absolute
+    left: 0
+    top: 0
   &.active
     opacity: 1
+    transition: all 0.6s
     transform: none
   .wrap
     position: absolute
@@ -708,3 +778,249 @@
     position: relative
     top: -2px
 /* end projects */
+
+/* start order-action */
+.order-action
+  background-color: #b70d13
+  color: white
+  padding: 30px 0 60px
+  text-align: center
+  .section-heading
+    color: white
+    margin-bottom: 0
+    +rmin($screen-md)
+      font-size: 39px
+  p
+    font-size: 19px
+    margin-top: 10px
+    opacity: .8
+  .button
+    margin-top: 40px
+    position: relative
+    cursor: pointer
+    .icon
+      position: absolute
+      right: 34px
+      top: 50%
+      margin-top: -7px
+/* end order-action */
+
+/* start team */
+.team
+  text-align: center
+  padding: 20px 0 50px
+  &-slider
+    position: relative
+    +rmin($screen-sm)
+      padding-top: 80px
+  &-person
+    height: 0
+    padding-bottom: 70%
+    +rmin($screen-md)
+      height: 356px
+      padding-bottom: 0
+  &-person-info
+    padding-top: 30px
+  &-person-name, &-person-work
+    transition: all 0.3s
+    opacity: 0
+    transform: translateY(10px)
+  &-person-name
+    font-size: 24px
+    +rmin($screen-sm)
+      font-size: 28px
+  &-person-work
+    font-size: 17px
+    +rmin($screen-sm)
+      font-size: 20px
+  .slick-current
+    .team-person-name,
+    .team-person-work
+      opacity: 1
+      transform: none
+    .team-person-name
+      transition-delay: 0.3s
+    .team-person-work
+      transition-delay: 0.5s
+    .team-person-work
+      opacity: .7
+  .svg-frame
+    width: 782px
+    position: absolute
+    left: 50%
+    top: 10px
+    z-index: 10
+    transform: translateX(-50%)
+    display: none
+    pointer-events: none
+    +rmin(1200px)
+      display: block
+    svg
+      transition: all 1s
+      opacity: 0
+      path
+        fill: transparent !important
+        stroke: #f10c28 !important
+        transition: fill 0.3s
+      &.showing
+        opacity: 1
+      &.finished
+        path
+         fill: #f10c28 !important
+/* end team */
+.arrows-container
+  position: absolute
+  width: 100%
+  bottom: 18px
+  left: 0
+  padding-left: 10px
+  padding-right: 10px
+  display: none
+  +rmin($screen-md)
+    display: block
+  .slider-arrows
+    max-width: 904px
+    margin: 0 auto
+    +clr()
+  .arr-left, .arr-right
+    background-color: transparent
+    padding: 0
+    border: none
+    position: relative
+    z-index: 10
+    cursor: pointer
+    display: inline-block
+    width: 181px
+    height: 30px
+    background: url(../images/arr-left-long.png) no-repeat center
+    opacity: .4
+    transition: all 0.3s
+    float: left
+    &:hover
+      opacity: 1
+    &.slick-disabled
+      opacity: .3
+      cursor: normal
+    &:focus
+      outline: none
+  .arr-right
+    float: right
+    background-image: url(../images/arr-right-long.png)
+
+/* start news */
+.news
+  text-align: center
+  padding: 40px 0
+  .container
+    max-width: 1430px
+    margin: 0 auto
+    width: 100%
+  &-item
+    max-width: 300px
+    margin: 40px auto
+    text-align: left
+    display: block
+    text-decoration: none
+    &:hover
+      .news-item-title
+        color: $color-red
+    +rmin($screen-sm)
+      display: inline-block
+    &-title
+      font-size: 20px
+      font-weight: 400
+      line-height: 1.4
+      position: relative
+      padding-bottom: 24px
+      transition: all 0.3s
+      &:before
+        content: ''
+        position: absolute
+        background-color: #ed1c24
+        bottom: 0
+        left: 0
+        width: 50px
+        height: 3px
+      +rmin($screen-sm)
+        font-size: 23px
+    &-text
+      font-size: 15px
+      line-height: 1.56
+      opacity: .8
+      +rmin($screen-sm)
+        font-size: 18px
+        height: 108px
+        overflow: hidden
+  .button
+    margin-top: 30px
+.date
+  display: inline-block
+  position: relative
+  +exo(600)
+  &:before
+    content: ''
+    background-color: #f10c28
+    position: absolute
+    width: 42px
+    height: 42px
+    border-radius: 50%
+    top: 12px
+    left: 17px
+  &-month, &-day
+    position: relative
+    z-index: 1
+    line-height: 1
+  &-month
+    font-size: 39px
+    font-weight: 600
+  &-day
+    color: white
+    margin-left: 36px
+    margin-top: -7px
+/* end news */
+
+/* start map-wrapper */
+.map-wrapper
+  height: 300px
+  position: relative
+  +rmin($screen-sm)
+    height: 367px
+  .google-map
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+/* end map-wrapper */
+
+/* start worktypes */
+.worktypes
+  text-align: center
+  padding: 30px 0
+  .container
+    max-width: 1430px
+    width: 100%
+    margin: 0 auto
+  &-item
+    padding-bottom: 0
+    margin: 30px 0
+    +rmin($screen-sm)
+      width: 280px
+      margin-left: 0
+      margin-right: -4px
+    +rmin($screen-md)
+      position: relative
+      &:last-child
+        &:after
+          display: none
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: 0
+        height: 86px
+        width: 1px
+        background-color: #e1e1e1
+        margin-top: -63px
+
+/* end worktypes */

@@ -1,0 +1,16 @@
+include _mixins
+doctype html
+html
+  head
+    block head
+    include _head
+  body(class=bodyClass)
+    //BEGIN out
+    .out(class=outClass)
+      block header
+        include ../partials/_header-inner
+      block content
+      block footer 
+        include ../partials/_footer 
+    //END out
+    include ../partials/_scripts
