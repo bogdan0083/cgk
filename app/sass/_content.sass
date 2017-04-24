@@ -1,6 +1,3 @@
-.block
-  display: flex
-
 .promo
   position: relative
   text-align: center
@@ -809,6 +806,12 @@
 .team
   text-align: center
   padding: 20px 0 50px
+  +rmin($screen-sm)
+    padding-top: 50px
+  .container
+    max-width: 1048px
+    width: 100%
+    margin: 0 auto
   &-slider
     position: relative
     +rmin($screen-sm)
@@ -867,6 +870,37 @@
       &.finished
         path
          fill: #f10c28 !important
+
+.team-inner
+  +rmin($screen-sm)
+    padding-bottom: 80px
+  .section-heading
+    max-width: 480px
+    margin: 0 auto
+    padding-bottom: 30px
+    position: relative
+    +rmin($screen-sm)
+      margin-bottom: 30px
+    &:after
+      content: ''
+      position: absolute
+      width: 184px
+      height: 3px
+      background-color: #272727
+      opacity: .5
+      left: 50%
+      bottom: 0
+      margin-left: -87px
+  p
+    +rmin($screen-sm)
+      font-size: 18px
+      line-height: 1.4
+  .team-why-us
+    +rmin($screen-sm)
+      margin: 120px 0 0
+  .team-slider
+    +rmin($screen-sm)
+      margin-top: 30px
 /* end team */
 .arrows-container
   position: absolute
@@ -1346,3 +1380,417 @@
       margin: 12px 0
       line-height: 1.4
 /* end requisites */
+
+.useful-info
+  .container
+    max-width: 1320px
+    width: 100%
+    .row > div
+      +rmin($screen-sm)
+        &:nth-child(2n+1)
+          clear: left
+  &-item
+    border: 1px solid #c3c3c3
+    display: block
+    text-align: center
+    text-decoration: none
+    .top, .bottom
+      padding: 15px
+    .bottom
+      background-color: #f7f7f7
+
+.useful-info
+  padding-bottom: 20px
+  &-item
+    border: 1px solid #c3c3c3
+    display: block
+    text-align: center
+    text-decoration: none
+    margin: 0 0 20px
+    +rmin($screen-md)
+      position: relative
+      margin: 20px 0
+      &:after
+        content: ''
+        width: 252px
+        height: 308px
+        background: url(../images/frame-left.png) no-repeat center / 100% 100%
+        position: absolute
+        left: -15px
+        top: -12px
+        transition: all 0.3s
+        opacity: 0
+        transform: translateX(-20px)
+    &:hover
+      &:after
+        opacity: 1
+        transform: none
+      .bottom
+        background-color: #fdf0f1
+    .top, .bottom
+      padding: 15px
+      +rmin($screen-md)
+        padding-left: 42px
+        padding-right: 32px
+        text-align: left
+    .top
+      padding-top: 0
+      +rmin($screen-md)
+        padding-top: 20px
+        padding-bottom: 10px
+    .bottom
+      background-color: #f7f7f7
+      transition: all 0.3s
+      color: #ed1c24
+      font-size: 17px
+      padding-top: 20px
+      padding-bottom: 15px
+      +rmin($screen-md)
+        padding-left: 270px
+    .image
+      border-bottom: 1px solid #f3f3f3
+      padding-bottom: 10px
+      height: 120px
+      position: relative
+      img
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        max-width: 90%
+        max-height: 90%
+      +rmin($screen-md)
+        float: left
+        width: 188px
+        padding-right: 15px
+        border-bottom: 0
+        border-right: 1px solid #e7e7e7
+        padding-top: 10px
+        text-align: left
+        img
+          position: static
+          max-width: 100%
+          max-height: 100%
+    .content
+      padding: 20px 0 10px
+      opacity: .9
+      line-height: 1.33
+      +rmin($screen-sm)
+        font-size: 16px
+      +rmin($screen-md)
+        font-size: 18px
+        overflow: hidden
+        padding-left: 42px
+        text-align: left
+        padding-top: 10px
+    .content, .image
+      +rmin($screen-md)
+        min-height: 188px
+  .inner
+    position: relative
+    padding-right: 40px
+    display: inline-block
+    max-width: 100%
+    white-space: nowrap
+    &:after, &:before
+      content: ''
+      width: 30px
+      height: 30px
+      background: white url(../images/arr-right.png) no-repeat center
+      position: absolute
+      top: 50%
+      margin-top: -15px
+      right: 0
+      transition: all 0.3s
+      z-index: 1
+      border-radius: 50%
+      box-shadow: 0 5px 2px rgba(234, 234, 234, 0.75)
+      border: 1px solid #bdbdbd
+    &:before
+      opacity: 1
+    &:after
+      opacity: 0
+      background-image: url(../images/arr-right-hover.png)
+  &-url
+    display: block
+    width: 100%
+    text-overflow: ellipsis
+    overflow: hidden
+    &:before
+      content: ''
+      display: inline-block
+      width: 12px
+      height: 12px
+      vertical-align: middle
+      background-image: url(../images/link.png)
+      margin-right: 8px
+
+/* start questions */
+.questions
+  background-color: #b70d13
+  color: white
+  padding: 50px 0 60px
+  text-align: center
+  +rmin($screen-sm)
+    background: #b70d13 url(../images/questions-bg.jpg) no-repeat center / cover
+    padding-top: 60px
+    padding-bottom: 40px
+  .section-heading
+    color: white
+    margin-bottom: 6px
+    margin-top: 0
+  p
+    margin-top: 0
+    +rmin($screen-sm)
+      font-size: 19px
+  &-block
+    margin: 40px 0
+    +rmin($screen-sm)
+      display: inline-block
+      margin-left: 40px
+      margin-right: 40px
+    +rmin($screen-md)
+      margin-left: 80px
+      margin-right: 80px
+    .icon
+      width: 72px
+      height: 72px
+      position: relative
+      background-color: white
+      border-radius: 50%
+      margin: 0 auto
+      svg
+        position: absolute
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        width: 19px
+    .text
+      margin: 10px 0 -4px
+      font-size: 18px
+      opacity: .8
+      &-large
+        font-size: 26px
+        +exo(600)
+/* end questions */
+
+/* start about-slider: */
+.about-slider
+  color: white
+  display: table
+  height: 558px
+  table-layout: fixed
+  width: 100%
+  background: #3b3b3b url(../images/about-slider-img.jpg) no-repeat fixed center / cover
+  text-align: center
+  display: none
+  +rmin($screen-sm)
+    display: table
+  .container
+    display: table-cell
+    vertical-align: middle
+    width: 100%
+  .slide-mega-word
+    +exo(600)
+    line-height: 0.8
+    font-size: 20vw
+    position: absolute
+    margin: auto
+    right: 0
+    bottom: 0
+    left: 0
+    top: 0
+    text-align: center
+    width: 100%
+    transition: all .9s 0.3s
+    transform: scale(0.5)
+    text-transform: uppercase
+    opacity: .4
+    white-space: nowrap
+  .slide
+    position: relative
+    opacity: 0
+  .slick-list
+    overflow: visible
+  .inner
+    max-width: 800px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+  h2
+    padding-bottom: 24px
+    position: relative
+    transition: all 0.4s 1s
+    opacity: 0
+    transform: translateY(20px)
+  .separator
+    height: 4px
+    left: 50%
+    bottom: 0
+    width: 10px
+    background-color: $color-red
+    transition: all 1s 1.4s
+    opacity: 0
+    display: block
+    margin: -40px auto 20px
+  .text
+    font-size: 17px
+    opacity: 0
+    transform: translateY(20px)
+    transition: all 0.4s 1.8s
+  .slider-pagination
+    text-align: center
+    margin-top: 60px
+    .arr-left, .arr-right
+      background-color: transparent
+      padding: 0
+      border: none
+      position: relative
+      z-index: 10
+      cursor: pointer
+      display: inline-block
+      width: 27px
+      height: 27px
+      background: url(../images/arr-small-left.png) no-repeat center
+      opacity: .25
+      transition: all 0.3s
+      padding: 0 20px
+      vertical-align: middle
+      &:hover
+        opacity: 1
+      &.slick-disabled
+        opacity: .1
+        cursor: normal
+      &:focus
+        outline: none
+    .arr-right
+      background-image: url(../images/arr-small-right.png)
+    .num
+      height: 27px
+      line-height: 27px
+      display: inline-block
+      vertical-align: middle
+      padding: 0 14px
+      &-current
+        border-right: 1px solid #3e3e3e
+        color: #767575
+      &-max
+        color: #555555
+  +rmin($screen-sm)
+    height: 658px
+    h2
+      font-size: 43px
+  .text
+    font-size: 23px
+  .slide-animated
+    .slide-mega-word
+      opacity: 0.03
+      transform: none
+    h2, .text
+      transform: none
+      opacity: 1
+    h2:after
+      transition: all 0.3s 1s
+      opacity: 1
+      width: 124px
+      transform: none
+    .separator
+      opacity: 1
+      width: 124px
+/* end about-slider: */
+
+.red
+  color: $color-red
+
+/* start about-services */
+.about-services
+  background-color: #ededed
+  padding: 20px 0
+  text-align: center
+  .container
+    max-width: 100%
+    width: auto
+  +rmin($screen-md)
+    padding-top: 0
+  &-item
+    text-align: center
+    width: 49%
+    vertical-align: top
+    display: inline-block
+    margin: 20px 0
+    padding: 0 10px
+    +rmin($screen-sm)
+      width: 240px
+      margin: 20px
+    +rmin($screen-md)
+      margin-top: -30px
+      margin-bottom: 40px
+    .circle
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      background-color: $color-red
+      line-height: 60px
+      margin: 0 auto 20px
+      color: white
+      font-size: 14px
+      +exo(500)
+    .text-gray, .text
+      margin: 2px 0
+      line-height: 1.28
+    .text-gray
+      color: #232323
+/* end about-services */
+
+.licences
+  padding: 30px 0
+  text-align: center
+.licence-item
+  margin: 40px 20px
+  display: inline-block
+  position: relative
+  +rmin($screen-md)
+    margin-left: 60px
+    margin-right: 60px
+  &:focus
+    outline: none
+  +rmin($screen-sm)
+    margin-top: 20px
+  &:hover
+    img
+      filter: none
+    .icon
+      border-color: $color-red
+    svg
+      path
+        fill: $color-red
+  img
+    display: block
+    filter: grayscale(100%)
+    transition: all 0.3s
+    border: 1px solid #d0d0d0
+  .icon
+    width: 50px
+    height: 50px
+    border: 1px solid #aeaeae
+    border-radius: 50%
+    position: absolute
+    bottom: -25px
+    right: -25px
+    background-color: white
+    transition: all 0.3s
+    &:focus
+      outline: none
+    svg
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      margin: auto
+      path
+        transition: all 0.3s

@@ -3,6 +3,7 @@ $(document).ready(function() {
   var $packagesSlider = $('.packages-tabs-slider');
   var $projectsSlider = $('.projects-slider');
   var $teamSlider = $('.team-slider .wrapper');
+  var $aboutSlider = $('.about-slider .wrapper');
   var $tabs = $('.js-tabs');
   var windowWidth = $(window).width();
 
@@ -311,6 +312,16 @@ $(document).ready(function() {
   });
 
   $('.popup-link').magnificPopup({type: 'inline', showCloseBtn: false, removalDelay: 300, mainClass: 'mfp-move-horizontal'});
+  $('.zoom-popup').magnificPopup({
+    type: 'image',
+    easing: 'ease-in-out',
+    mainClass: 'mfp-with-zoom',
+    zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+      duration: 300, // duration of the effect, in milliseconds
+      easing: 'ease-in-out' // CSS transition easing function
+    }
+  });
 
   $teamSlider.on('init', function() {
     Waypoint.refreshAll();
@@ -339,6 +350,32 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+
+  $aboutSlider.on('init', function() {
+    AOS.refresh();
+    Waypoint.refreshAll();
+    setTimeout(function () {
+      $aboutSlider.find('.slide').eq(0).addClass('slide-animated');
+    }, 100);
+  });
+
+  $aboutSlider.on('beforeChange', function(_, slick, current, next) {
+    var $currentSlide = $(slick.$slides[current]);
+    var $nextSlide = $(slick.$slides[next]);
+
+    $currentSlide.removeClass( 'slide-animated' );
+    $nextSlide.addClass( 'slide-animated' );
+    $('.about-slider .num-current').text( next + 1 );
+  });
+
+  $aboutSlider.slick({
+    infinite: true,
+    arrows: true,
+    dots: false,
+    fade: true,
+    prevArrow: $('.about-slider .arr-left'),
+    nextArrow: $('.about-slider .arr-right')
   });
 
 $('.js-requisites-toggle').click(function(e) {
