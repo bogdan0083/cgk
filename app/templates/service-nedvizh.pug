@@ -1,0 +1,479 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Popups'
+  - var n = 0
+  - var i = 0
+  - var servicesTextArr = ['Технический <br/> план', 'Межевой<br/>план', 'Акт<br/> обследования', 'Выписки<br/> из ЕГРН', 'Геодезическая<br/> съемка и обмеры', 'Схема расположения<br/>земельного участка', 'Исправление<br/> реестровых ошибок', 'Проектная<br/> документация', ' Кадастровый учет<br/> и регистрация прав', 'Юридические<br/> услуги']
+  - var worktypesTextArr = ['Земельные <br/> участки', 'Здания <br/> и сооружения', 'Нежилые <br/> помещения', 'Квартиры <br/> и комнаты',  'Юридические <br/> услуги']
+block header
+  - var headerInner = true
+  - var active = 1
+  - var submenu = true
+  - var submenuActive = 0
+  - var submenuSecondary = true
+block content
+  // start layout
+  .layout.layout-service
+    .container
+      h1.layout-heading Технический план
+      a.link-back(href="#") #[span Вернуться]
+    // start service-mega-block
+    .service-mega-block(style="background: url(images/service-bg1.jpg) no-repeat center / cover")
+      .container
+        section.order-action.order-action-inner
+          .wrapper
+            h2.section-heading(data-aos="fade-up" data-aos-anchor=".order-action") Оставить заявку      
+            p(data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".order-action") Отправьте заявку и получите бесплатную консультацию в течение 2 минут 
+            form.order-action-form
+            .input-wrap(data-aos="fade-up" data-aos-delay="700" data-aos-anchor=".order-action")
+              .js-input-placeholder 
+                span Имя
+              input.input-centered.js-input(type="text" name="user.name" data-aos-anchor=".order-action")
+            .input-wrap(data-aos="fade-up" data-aos-delay="900" data-aos-anchor=".order-action")
+              .js-input-placeholder
+                span Телефон
+              input.input-centered.js-input(type="text" name="user.phone" data-aos-anchor=".order-action")
+              button.button.button-white(data-aos="fade-up" data-aos-delay="1100" data-aos-anchor=".order-action")
+                span Отправить
+    // end service-mega-block
+    // start service-dark-desc
+    .service-dark-desc 
+      .container
+        h3.heading(data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".service-dark-desc" data-aos-duration="600") Технический план представляет собой документ, в котором воспроизведены определенные сведения, внесенные в Единый государственный реестр недвижимости,
+        p.gray(data-aos="fade-in" data-aos-delay="300" data-aos-duration="600" data-aos-anchor=".service-dark-desc") и указаны сведения о здании, сооружении, помещении, машино-месте, объекте незавершенного строительства или едином недвижимом комплексе, необходимые для государственного кадастрового учета такого объекта недвижимости, а также сведения о части или частях здания, сооружения, помещения, единого недвижимого комплекса либо новые необходимые для внесения в Единый государственный реестр недвижимости сведения об объектах недвижимости, которым присвоены кадастровые номера
+        p.small.dark(data-aos="fade-in" data-aos-delay="500" data-aos-duration="600" data-aos-anchor=".service-dark-desc") (п. 2 Приказа Минэкономразвития России от 18.12.2015 N 953 "Об утверждении формы технического плана и требований к его подготовке, состава содержащихся в нем сведений, а также формы декларации об объекте недвижимости, требований к ее подготовке, состава содержащихся в ней сведений")
+    // end service-dark-desc
+    // start static-content
+    .static-content 
+      .container
+        .table-responsive
+          table.custom-table
+            thead
+              tr
+                th #[span Наименование]
+                th #[span Характеристика]
+                th #[span Стоимость]
+                th #[span Сроки]
+            tbody
+              tr
+                td Технический план нежилого здания/ без обмеров
+                td 
+                  span до 500 кв. м
+                  span свыше 500 кв. м
+                td 
+                  span 40 000 Р
+                  span + 10 Р за 1 кв. м.
+                td 7 р. д.
+              tr
+                td Технический план здания (ИЖС, гараж, объект незавершенного строительства) 
+                td 
+                  span — 
+                td 
+                  span 30 000 Р
+                td 
+              tr
+                td Технический план многоквартирного дома/ без обмеров 
+                td 
+                  span —
+                  span + за каждую квартиру
+                  span + за каждое помещение
+                td 
+                  span 70 000 Р 
+                  span 2 500 Р
+                  span 7 500 Р
+                td 10 р. д.
+              tr
+                td Технический план нежилого помещения/ без обмеров
+                td 
+                  span до 500 кв. м
+                  span свыше 500 кв. м 
+                td 
+                  span 25 000 Р
+                  span + 10 Р за 1 кв. м.
+                td 7 р. д.
+              tr
+                td Технический план помещения (квартира)
+                td 
+                  span до 500 кв. м
+                  span свыше 500 кв. м 
+                td 
+                  span 25 000 Р
+                  span + 10 Р за 1 кв. м.
+                td 7 р. д.
+              tr
+                td Технический план сооружения
+                td 
+                  span до 500 п. м.
+                  span свыше 500 п. м.
+                td 
+                  span 40 000 Р
+                  span + 20 Р за 1 п. м.
+                td 7 р. д.
+              tr
+                td Технический план машино-места
+                td 
+                  span 1
+                  span 1 - 10
+                  span 10 - 50
+                  span свыше 50
+                td 
+                  span 12 000 Р
+                  span 7 000 Р
+                  span 5 000 Р
+                  span 3 000 Р
+                td 10 р. д.
+    // end static-content
+  // end layout
+  .plan-for
+    .container
+      h2(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100").section-heading Технический план необходим 
+      p(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="300") при образовании, учете изменений или исправлении реестровой ошибки:
+      .plan-for-group
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 01
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Здания или части
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") здания
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 02
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Помещения или части
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") помещения
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 03
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Сооружения или части
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") Сооружений
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 04
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Машино-месте
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") в паркинге
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 05
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Объекта незавершенного
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") строительства 
+        .plan-for-item
+          .circle(data-aos="fade-down" data-aos-anchor=".plan-for" data-aos-delay="0") 06
+          .text.text-gray(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="1") Единого недвижимого 
+          .text(data-aos="fade-up" data-aos-anchor=".plan-for" data-aos-delay="100") комплекса или его части
+  // start questions
+  .questions
+    .container
+      h2.section-heading Если у Вас возникли вопросы,
+      p касающихся кадастровых работ, вы можете обратиться к нам
+      .questions-block
+        .icon
+          include data/phone.svg
+        .text по телефону
+        .text-large +7 (495) 643 85 88
+      .questions-block
+        .icon
+          include data/envelope.svg
+        .text по электронной почте
+        .text-large 
+          a.mailto(href="mailto:info@cntgeo.ru")
+            span info@cntgeo.ru
+  // end questions
+  // start packages
+  section.packages
+    .container
+      h2.section-heading(data-aos="fade" data-aos-anchor=".packages" 
+      data-aos-duration="600" data-aos-delay="200") Мы предлагаем Вам #[br] готовые пакеты услуг
+    .packages-group
+      .packages-tabs.js-tabs
+        .packages-types(data-aos="fade-up" data-aos-duration="800" data-aos-delay="100")
+          .wrapper
+            .frame(data-aos="zoom-in" data-aos-anchor=".packages-types" data-aos-duration="600" data-aos-delay="400")
+            button.package-type.js-tab-link Премиум
+            button.package-type.js-tab-link Базовый
+            button.package-type.js-tab-link.active Стандарт
+            button.package-type.js-tab-link Все включено
+        .packages-tabs-slider(data-aos="fade-up" data-aos-anchor=".packages" data-aos-offset="100" data-aos-duration="600" data-aos-delay="1200")
+          .slide
+            .package-details
+              h3  Кадастровый учет #[br] земельного участка
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет #[br] земельного участка
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет #[br] земельного участка
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет #[br] земельного участка
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+      .packages-tabs.js-tabs
+        .packages-types(data-aos="fade-up" data-aos-duration="800" data-aos-delay="100")
+          .wrapper  
+            .frame(data-aos="zoom-in" data-aos-anchor=".packages-types" data-aos-duration="600" data-aos-delay="400")
+            button.package-type.js-tab-link Премиум
+            button.package-type.js-tab-link Базовый
+            button.package-type.js-tab-link.active Стандарт
+            button.package-type.js-tab-link Все включено
+        .packages-tabs-slider(data-aos="fade-up" data-aos-anchor=".packages" data-aos-duration="600" data-aos-delay="1200")
+          .slide
+            .package-details
+              h3  Кадастровый учет зданий,#[br] сооружений (ОКС)
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет зданий,#[br] сооружений (ОКС)
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет зданий,#[br] сооружений (ОКС)
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+          .slide
+            .package-details
+              h3  Кадастровый учет зданий,#[br] сооружений (ОКС)
+              ul.package-list
+                li
+                  span Сбор исходной документации  
+                li
+                  span Обмеры, геодезическая съемка
+                li
+                  span Подготовка технического плана
+                li
+                  span Проект и тех заключение
+              a.package-price-block.popup-link(href="#")
+                span.package-price от 20 000 Р
+                span.package-period 20 дней
+  // end packages
+  // start steps
+  section.steps 
+    .container
+      h2.section-heading(data-aos="fade-up" data-aos-anchor=".steps" 
+            data-aos-duration="600" data-aos-delay="200") Как мы работаем
+      .steps-group
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" 
+            data-aos-duration="600" data-aos-delay="400")
+          .icon
+            img(src="images/step-icon1.png" alt="")
+          h4 Принимаем заявку
+          p и выясняем цель оформления документов
+          span.step-num 01
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" 
+            data-aos-duration="600" data-aos-delay="500")
+          .icon
+            img(src="images/step-icon2.png" alt="")
+          h4 Анализируем
+          p представленные Вами документы, реестры и фактическое использование объекта
+          span.step-num 02
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps" 
+            data-aos-duration="600" data-aos-delay="700")
+          .icon
+            img(src="images/step-icon3.png" alt="")
+          h4 Согласовываем
+          p стоимость и алгоритм работ
+          span.step-num 03
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps"
+            data-aos-duration="600" data-aos-delay="900")
+          .icon
+            img(src="images/step-icon4.png" alt="")
+          h4 Подготавливаем
+          p необходимый пакет документов согласно выбранному порядку
+          span.step-num 04
+        .steps-item(data-aos="zoom-in" data-aos-anchor=".steps"
+            data-aos-duration="600" data-aos-delay="1100")
+          .icon
+            img(src="images/step-icon5.png" alt="")
+          h4 Передаем заказчику 
+          p положительный результат проекта в соответствии с поставленными задачами
+          span.step-num 05
+      a.button.popup-link(href="#popup-call" data-aos="fade-up" data-aos-anchor=".steps"
+            data-aos-duration="600" data-aos-delay="1300")
+        span Оставить заявку
+  // end steps
+  .other-services
+    .container
+      h2.section-heading Другие услуги
+      .other-services-slider
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb1.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Технический план
+                p.text Документ, необходимый для государственного кадастрового учета объектов капитального строительства
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Межевой план
+                p.text Документ, необходимый для кадастрового учета земельного участка или части земельного участка
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Акт обследования
+                p.text Документ, необходимый для снятия объекта капитального строительства с кадастрового учета
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Выписки из ЕГРН
+                p.text Сведения ЕГРН об объекте, зарегистрированных правах на него, копии документов, содержащихся в реестре
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Юридические услуги
+                p.text Узаконивание перепланировок, подготовка документов, полное сопровождение сделки, консультации
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Геодезическая съемка и обмеры
+                p.text Комплекс работ, в процессе которого выполняется получение данных для составления чертежей, планов, схем
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Схема расположения земельного участка
+                p.text Документ, необходимый для формирования нового земельного участка на кадастровом плане территории
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Исправление реестровых ошибок
+                p.text Работы, направленные для устранения ошибок в сведениях ЕГРН и документах, на основании которых сведения были внесены в базу
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Проектная документация
+                p.text Документы, необходимые для узаконивания перепланировок либо переустройств объектов капитального строительства
+            .bottom
+              span Подробнее
+        .slide
+          a.service-block-item(href="#")
+            .wrapper
+              .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+              .content
+                h4.service-item-heading Кадастровый учет и регистрация прав
+                p.text Комплекс мероприятий для постановки объектов на учет, внесение изменений в сведения ЕГРН, регистрации прав и обременений 
+            .bottom
+              span Подробнее
+      .pagination
+        button.arr-left
+        .nums
+          span.num.num-current 1
+          span.num.num-max 2
+        button.arr-right
+  // start map-wrapper
+  .map-wrapper 
+    .google-map#map
+  // end map-wrapper
+  // start worktypes
+  section.worktypes
+    .container
+      .worktypes-group
+        while i < 5
+          a.worktypes-item(href="#" data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="600" data-aos-delay=(i * 300))
+            .icon
+              img(src='images/worktype-icon' + (i + 1) +'.png' alt="Типы работ " + i)
+            p.text!= worktypesTextArr[i]
+          - i++
+  // end worktypes

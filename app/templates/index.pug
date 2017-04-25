@@ -28,7 +28,7 @@ block content
           | Геодезии
           br
           | и Кадастра
-        a.button.popup-link(href="#popup-call" data-aos="fade-up" data-aos-anchor=".promo" 
+        a.button.popup-link(href="#popup-callback" data-aos="fade-up" data-aos-anchor=".promo" 
             data-aos-duration="700" data-aos-delay="2200") 
           span Заказать звонок
           span.icon
@@ -278,13 +278,13 @@ block content
       .image-wrapper
         .projects-image(style="background: url(images/project1.jpg) no-repeat center / cover")
       .image-wrapper
-        .projects-image(style="background: url(https://unsplash.it/826/660/?random) no-repeat center / cover")
+        .projects-image(style="background: url(images/project2.jpg) no-repeat center / cover")
       .image-wrapper
-        .projects-image(style="background: url(https://unsplash.it/g/826/660/) no-repeat center / cover")
+        .projects-image(style="background: url(images/project3.jpg) no-repeat center / cover")
       .image-wrapper
-        .projects-image(style="background: url(images/project1.jpg) no-repeat center / cover")
+        .projects-image(style="background: url(images/project4.jpg) no-repeat center / cover")
       .image-wrapper
-        .projects-image(style="background: url(https://unsplash.it/826/660/?random) no-repeat center / cover")
+        .projects-image(style="background: url(images/project5.jpg) no-repeat center / cover")
     .projects-showcase(data-aos="fade" data-aos-anchor='.projects' data-aos-duration="1000" data-aos-delay="500")
       .inner
         h2.section-heading(data-aos="fade-up" data-aos-anchor='.projects' data-aos-duration="1000") Реализованные проекты
@@ -501,7 +501,7 @@ block content
   // start team
   section.team 
     h2.section-heading(data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".team") Наша команда
-    .team-slider(data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".team")
+    .team-slider(data-aos="fade-up" data-aos-delay="100")
       .svg-frame
         include data/frame.svg
       .wrapper
@@ -590,3 +590,120 @@ block content
             p.text!= worktypesTextArr[i]
           - i++
   // end worktypes
+  // start popup order
+  #popup-order.popup.popup-order.mfp-with-anim.mfp-hide
+    button.popup-close(onclick='$.magnificPopup.close()')
+    .popup-header
+      h3 Оставить заявку
+      p Оставьте заявку или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+    .popup-content
+      form.popup-form
+        .row
+          .col-xs-12.col-sm-12.col-md-12
+            .input-block
+              span
+                | ФИО
+                i.required *
+              input(type='text' name="user-fio")
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block.input-block-mail
+              span 
+                | E-mail
+                i.required *
+              input(type='text' name="user-email")
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block
+              span
+                | Телефон 
+              input(type='text')
+          .col-xs-12.col-sm-12.col-md-12
+            .input-block.input-block-textarea
+              span
+                | Сообщение 
+                i.required *
+              textarea(name="user-message")
+        .popup-form-bottom
+          span.popup-form-caption
+            | Обязательные поля для заполнения
+          button.button
+            span Оставить заявку
+            span.icon
+              include data/envelope.svg
+  // start popup order
+  // start popup call
+  #popup-call.popup.popup-call.mfp-with-anim.mfp-hide
+    button.popup-close(onclick='$.magnificPopup.close()')
+    .popup-header
+      h3 Обратная связь
+      p Напишите нам или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+    .popup-content
+      form.popup-form
+        .row
+          .col-xs-12.col-sm-12.col-md-12
+            .input-block
+              span
+                | ФИО
+                i.required *
+              input(type='text' name="user-fio")
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block.input-block-mail
+              span 
+                | E-mail
+                i.required *
+              input(type='text' name="user-email")
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block
+              span
+                | Телефон 
+              input(type='text')
+          .col-xs-12.col-sm-12.col-md-12
+            .input-block.input-block-textarea
+              span
+                | Сообщение 
+                i.required *
+              textarea(name="user-message")
+        .popup-form-bottom
+          span.popup-form-caption
+            | Обязательные поля для заполнения
+          button.button.button-text-centered
+            span Отправить
+            span.icon
+              include data/envelope.svg
+  // start popup call
+  // start popup success
+  #popup-success.popup.popup-success.mfp-with-anim.mfp-hide
+    button.popup-close(onclick='$.magnificPopup.close()')
+    .popup-header
+      h3 Спасибо!
+    .popup-content
+        h4 Ваша заявка успешно отправлена
+        p Наши менеджеры свяжутся с Вами в ближайшее время
+  // start popup success
+  // start popup callback
+  #popup-callback.popup.popup-callback.mfp-with-anim.mfp-hide
+    button.popup-close(onclick='$.magnificPopup.close()')
+    .popup-header
+      h3 Обратный звонок
+      p Оставьте заявку или получите бесплатную консультацию, позвонив нам по телефону: #[span +7 (495) 643 85 88]
+    .popup-content
+      form.popup-form
+        .row
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block
+              span
+                | ФИО
+                i.required *
+              input(type='text' name="user-fio")
+          .col-xs-12.col-sm-6.col-md-6
+            .input-block
+              span
+                | Телефон 
+              input(type='text')
+        .popup-form-bottom
+          span.popup-form-caption
+            | Обязательные поля для заполнения
+          button.button.button-text-centered
+            span Жду звонка
+            span.icon
+              include data/phone.svg
+  // start popup callback

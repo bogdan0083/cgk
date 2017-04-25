@@ -1,8 +1,3 @@
-html	/media/bogdan/d/projects/new/app/sass/_common.sass	/^html$/;"	function	line:6
-body	/media/bogdan/d/projects/new/app/sass/_common.sass	/^body$/;"	function	line:15
-a	/media/bogdan/d/projects/new/app/sass/_common.sass	/^a$/;"	function	line:24
-img	/media/bogdan/d/projects/new/app/sass/_common.sass	/^img$/;"	function	line:29
-.out	/media/bogdan/d/projects/new/app/sass/_common.sass	/^.out$/;"	function	line:35
 .header	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^.header$/;"	function	line:1
 p	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^  p$/;"	function	line:5
 img	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    img$/;"	function	line:17
@@ -14,36 +9,221 @@ a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	
 a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^      a$/;"	function	line:84
 .inner	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    .inner$/;"	function	line:126
 a	/home/bogdan/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:129
-setTimeout	/home/bogdan/projects/new/app/scripts/main.js	/^  setTimeout(function () {$/;"	function	line:25
-onSvgDrawEnd	/home/bogdan/projects/new/app/scripts/main.js	/^  function onSvgDrawEnd() {$/;"	function	line:57
-.block	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.block$/;"	function	line:1
-.promo	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.promo$/;"	function	line:4
-.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:8
+initMap	/home/bogdan/projects/new/app/scripts/main.js	/^  (function initMap() {$/;"	function	line:39
+onSvgDrawEnd	/home/bogdan/projects/new/app/scripts/main.js	/^  function onSvgDrawEnd() {$/;"	function	line:197
+changePicture	/home/bogdan/projects/new/app/scripts/main.js	/^  function changePicture(currentIndex, nextIndex) {$/;"	function	line:203
+setTimeout	/home/bogdan/projects/new/app/scripts/main.js	/^    setTimeout(function() {$/;"	function	line:216
+animateCircles	/home/bogdan/projects/new/app/scripts/main.js	/^  function animateCircles(circles, redraw) {$/;"	function	line:226
+setTimeout	/home/bogdan/projects/new/app/scripts/main.js	/^      setTimeout(function() {$/;"	function	line:230
+setTabFrame	/home/bogdan/projects/new/app/scripts/main.js	/^  function setTabFrame($tabsContainer, $tabFrame) {$/;"	function	line:249
+setTimeout	/home/bogdan/projects/new/app/scripts/main.js	/^    setTimeout(function () {$/;"	function	line:424
+functionname	/home/bogdan/projects/new/app/scripts/main.js	/^  $('.js-circle').on('circle-animation-progress', function functionname(event, progress, step) {$/;"	function	line:459
+setTimeout	/home/bogdan/projects/new/app/scripts/main.js	/^  setTimeout(function() {$/;"	function	line:489
+html	/media/bogdan/d/projects/new/app/sass/_common.sass	/^html$/;"	function	line:6
+body	/media/bogdan/d/projects/new/app/sass/_common.sass	/^body$/;"	function	line:15
+a	/media/bogdan/d/projects/new/app/sass/_common.sass	/^a$/;"	function	line:24
+img	/media/bogdan/d/projects/new/app/sass/_common.sass	/^img$/;"	function	line:29
+.out	/media/bogdan/d/projects/new/app/sass/_common.sass	/^.out$/;"	function	line:54
+.button	/media/bogdan/d/projects/new/app/sass/_common.sass	/^.button$/;"	function	line:75
+svg	/media/bogdan/d/projects/new/app/sass/_common.sass	/^  svg$/;"	function	line:96
+path	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    path$/;"	function	line:97
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    span$/;"	function	line:102
+.icon	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    .icon$/;"	function	line:110
+svg	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    svg$/;"	function	line:112
+path	/media/bogdan/d/projects/new/app/sass/_common.sass	/^      path$/;"	function	line:113
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^      span$/;"	function	line:117
+.icon	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    .icon$/;"	function	line:127
+svg	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    svg$/;"	function	line:129
+path	/media/bogdan/d/projects/new/app/sass/_common.sass	/^      path$/;"	function	line:130
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^      span$/;"	function	line:135
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    span$/;"	function	line:141
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^      span$/;"	function	line:145
+.icon	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    .icon$/;"	function	line:151
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^  span$/;"	function	line:159
+.icon	/media/bogdan/d/projects/new/app/sass/_common.sass	/^  .icon$/;"	function	line:162
+svg	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    svg$/;"	function	line:168
+span	/media/bogdan/d/projects/new/app/sass/_common.sass	/^    span$/;"	function	line:187
+.header	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^.header$/;"	function	line:1
+p	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^  p$/;"	function	line:6
+.logo	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^        .logo$/;"	function	line:35
+.logo	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^  .logo$/;"	function	line:74
+.inner	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    .inner$/;"	function	line:127
+a	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:129
+.left	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    .left$/;"	function	line:153
+.right	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    .right$/;"	function	line:155
+a	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^      a$/;"	function	line:158
+a	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:184
+.inner	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    .inner$/;"	function	line:205
+a	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^    a$/;"	function	line:208
+svg	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^  svg$/;"	function	line:231
+.submenu	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^.submenu$/;"	function	line:239
+.separator	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^  .separator$/;"	function	line:245
+a	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^  a$/;"	function	line:253
+span	/media/bogdan/d/projects/new/app/sass/partials/_header.sass	/^      span$/;"	function	line:280
+.promo	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.promo$/;"	function	line:1
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:5
 svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:28
 path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      path$/;"	function	line:31
 path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^        path$/;"	function	line:36
-.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .button$/;"	function	line:66
-.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .button$/;"	function	line:76
-h1	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h1$/;"	function	line:79
-.ground	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .ground$/;"	function	line:89
-.navigation	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .navigation$/;"	function	line:115
-a	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    a$/;"	function	line:119
-.slide	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .slide$/;"	function	line:152
-span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:154
-.services	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.services$/;"	function	line:173
-.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:176
-.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:217
-.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:228
-.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:235
-img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    img$/;"	function	line:250
-.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:262
-.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .text$/;"	function	line:267
-.steps	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.steps$/;"	function	line:272
-.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .container$/;"	function	line:278
-.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .container$/;"	function	line:281
-.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:290
-img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    img$/;"	function	line:296
-h4	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h4$/;"	function	line:313
-p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:319
-.packages	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.packages$/;"	function	line:347
-.package	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.package$/;"	function	line:360
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .button$/;"	function	line:69
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .button$/;"	function	line:79
+h1	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h1$/;"	function	line:82
+.ground	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .ground$/;"	function	line:92
+a	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  a$/;"	function	line:113
+.slide	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .slide$/;"	function	line:161
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:163
+.services	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.services$/;"	function	line:182
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:187
+.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:229
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:240
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:247
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    img$/;"	function	line:262
+.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:274
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .text$/;"	function	line:279
+.steps	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.steps$/;"	function	line:285
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .button$/;"	function	line:289
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:303
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .container$/;"	function	line:310
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .container$/;"	function	line:313
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:323
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    img$/;"	function	line:329
+h4	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h4$/;"	function	line:346
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:352
+.packages	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.packages$/;"	function	line:380
+.wrapper	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .wrapper$/;"	function	line:395
+.frame	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .frame$/;"	function	line:399
+.package	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.package$/;"	function	line:445
+h3	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h3$/;"	function	line:499
+li	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    li$/;"	function	line:514
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:523
+.projects	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.projects$/;"	function	line:605
+.inner	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .inner$/;"	function	line:691
+.slide	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .slide$/;"	function	line:702
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .text$/;"	function	line:708
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .button$/;"	function	line:712
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:724
+a	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    a$/;"	function	line:764
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .button$/;"	function	line:768
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .icon$/;"	function	line:770
+canvas	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  canvas$/;"	function	line:781
+.wrap	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .wrap$/;"	function	line:789
+.num	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .num$/;"	function	line:799
+.caption	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .caption$/;"	function	line:802
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:820
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .button$/;"	function	line:824
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .icon$/;"	function	line:828
+.team	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.team$/;"	function	line:836
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:841
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:891
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      path$/;"	function	line:894
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^        path$/;"	function	line:901
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:924
+.news	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.news$/;"	function	line:975
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:978
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .button$/;"	function	line:1018
+.date	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.date$/;"	function	line:1020
+.worktypes	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.worktypes$/;"	function	line:1064
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1067
+.layout	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.layout$/;"	function	line:1095
+.popup	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.popup$/;"	function	line:1101
+h4	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      h4$/;"	function	line:1112
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      p$/;"	function	line:1119
+h4	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h4$/;"	function	line:1128
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    p$/;"	function	line:1130
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:1132
+h3	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h3$/;"	function	line:1176
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    p$/;"	function	line:1185
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:1190
+.row	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .row$/;"	function	line:1205
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .button$/;"	function	line:1215
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:1246
+.required	/media/bogdan/d/projects/new/app/sass/_content.sass	/^        .required$/;"	function	line:1261
+textarea	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    textarea$/;"	function	line:1305
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1317
+.button	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .button$/;"	function	line:1320
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .icon$/;"	function	line:1321
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      img$/;"	function	line:1323
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      img$/;"	function	line:1326
+h3	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h3$/;"	function	line:1340
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:1348
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:1356
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      path$/;"	function	line:1363
+h3	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h3$/;"	function	line:1365
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:1380
+.mail	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.mail$/;"	function	line:1385
+.requisites	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.requisites$/;"	function	line:1390
+li	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    li$/;"	function	line:1409
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1415
+.bottom	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .bottom$/;"	function	line:1429
+.bottom	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      .bottom$/;"	function	line:1458
+.top	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .top$/;"	function	line:1466
+.bottom	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .bottom$/;"	function	line:1471
+.image	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .image$/;"	function	line:1480
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      img$/;"	function	line:1485
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^        img$/;"	function	line:1502
+.content	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .content$/;"	function	line:1506
+.inner	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .inner$/;"	function	line:1521
+.questions	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.questions$/;"	function	line:1561
+.mailto	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .mailto$/;"	function	line:1566
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:1573
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:1593
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .icon$/;"	function	line:1618
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      svg$/;"	function	line:1625
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .text$/;"	function	line:1634
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1655
+.slide	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .slide$/;"	function	line:1676
+.inner	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .inner$/;"	function	line:1681
+h2	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h2$/;"	function	line:1686
+.separator	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .separator$/;"	function	line:1692
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:1702
+.num	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .num$/;"	function	line:1734
+h2	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    h2$/;"	function	line:1747
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:1749
+.separator	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .separator$/;"	function	line:1763
+.red	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.red$/;"	function	line:1768
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1776
+.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:1794
+.licences	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.licences$/;"	function	line:1811
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    img$/;"	function	line:1830
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .icon$/;"	function	line:1832
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:1834
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      path$/;"	function	line:1835
+img	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  img$/;"	function	line:1837
+.icon	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .icon$/;"	function	line:1849
+svg	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    svg$/;"	function	line:1861
+path	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      path$/;"	function	line:1868
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1875
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:1898
+.wrapper	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .wrapper$/;"	function	line:1910
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1915
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:1934
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  span$/;"	function	line:1936
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:1972
+.heading	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .heading$/;"	function	line:1976
+.gray	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.gray$/;"	function	line:2000
+.dark	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.dark$/;"	function	line:2003
+.small	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.small$/;"	function	line:2006
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:2014
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:2042
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:2044
+td	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  td$/;"	function	line:2051
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:2065
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:2105
+p	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  p$/;"	function	line:2111
+.circle	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .circle$/;"	function	line:2162
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:2184
+.container	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .container$/;"	function	line:2189
+.bottom	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    .bottom$/;"	function	line:2208
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^      span$/;"	function	line:2213
+.wrapper	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .wrapper$/;"	function	line:2216
+.content	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .content$/;"	function	line:2218
+h4	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  h4$/;"	function	line:2222
+.text	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .text$/;"	function	line:2228
+.bottom	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .bottom$/;"	function	line:2239
+span	/media/bogdan/d/projects/new/app/sass/_content.sass	/^    span$/;"	function	line:2245
+.pagination	/media/bogdan/d/projects/new/app/sass/_content.sass	/^.pagination$/;"	function	line:2271
+.nums	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .nums$/;"	function	line:2282
+.num	/media/bogdan/d/projects/new/app/sass/_content.sass	/^  .num$/;"	function	line:2303
+dev	/home/bogdan/projects/new/gulpfile.js	/^var dev = false;$/;"	variable	line:15
+lint	/home/bogdan/projects/new/gulpfile.js	/^function lint(files) {$/;"	function	line:75
+lint	/home/bogdan/projects/new/gulpfile.js	/^function lint(files) {$/;"	function	line:75

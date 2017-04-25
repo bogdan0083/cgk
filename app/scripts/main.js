@@ -5,6 +5,8 @@ $(document).ready(function() {
   var $teamSlider = $('.team-slider .wrapper');
   var $aboutSlider = $('.about-slider .wrapper');
   var $tabs = $('.js-tabs');
+  var $servicesSlider = $('.other-services-slider');
+
   var windowWidth = $(window).width();
 
   var waypoints = $('.projects').waypoint(function() {
@@ -16,7 +18,7 @@ $(document).ready(function() {
     this.destroy();
   }, {offset: '10%'});
 
-  $('.team').waypoint(function() {
+  $('.team-slider').waypoint(function() {
     var $this = $(this.element);
     // Отрисовка в шапке на главной
 
@@ -31,7 +33,7 @@ $(document).ready(function() {
 
     // destroy waypoints
     this.destroy();
-  }, {offset: '10%'});
+  }, {offset: '500'});
   // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
 
   (function initMap() {
@@ -258,6 +260,14 @@ $(document).ready(function() {
     $('.main-nav').toggleClass('active');
   });
 
+  $(window).resize(function () {
+    var $frame = $('.frame');
+    if ($frame.length > 0) {
+      $frame.each(function (idx, frame) {
+        setTabFrame( $(this).parent(), $(this) );
+      });
+    }
+  });
   // ПЛАГИНЫ
 
   // Init Animate On Scroll library (AOS);
@@ -273,6 +283,62 @@ $(document).ready(function() {
     fade: true
   });
 
+  var $otherServices = $('.other-services');
+  var $numCurrent = $otherServices.find('.num-current');
+  var $numMax = $otherServices.find('.num-max');
+
+  $servicesSlider.on('init', function (e, slick) {
+    var $slides = slick.$slides;
+    var $activeSlides = $slides.filter('.slick-active').length;
+    // $numCurrent
+    $numMax.text( Math.round($slides.length / $activeSlides) );
+  });
+
+  $servicesSlider.on('beforeChange', function (e, slick, current, next) {
+    var $slides = slick.$slides;
+    var $paginationNum = $numCurrent.text();
+    // $numCurrent
+    $numCurrent.text(next > current ? (parseInt($paginationNum) + 1) : (parseInt($paginationNum) - 1));
+  });
+
+  $servicesSlider.slick({
+    slidesToShow: 1,
+    mobileFirst: true,
+    prevArrow: $('.other-services .arr-left'),
+    nextArrow: $('.other-services .arr-right'),
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+        }
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5
+        }
+      }
+
+    ]
+  })
   // слайдер проектов
   $projectsSlider.on('init', function() {
     $('.image-wrapper').eq(0).css('z-index', 1);
@@ -400,7 +466,7 @@ $('.js-requisites-toggle').click(function(e) {
   // слайдер пакетов услуг
   $packagesSlider.on('init', function() {
     AOS.refresh();
-    $(window).trigger('resize');
+    Waypoint.refreshAll();
   });
 
   $packagesSlider.slick({
@@ -413,11 +479,12 @@ $('.js-requisites-toggle').click(function(e) {
   });
 
   // Отрисовка в шапке на главной
-  new Vivus('target', {
-    duration: 200,
-    type: 'sync'
-  }, onSvgDrawEnd).play();
-
+  if ($('#target').length > 0) {
+    new Vivus('target', {
+      duration: 200,
+      type: 'sync'
+    }, onSvgDrawEnd).play();
+  }
   // СОБЫТИЯ, ТАЙМАУТЫ И ПРОЧ.
   setTimeout(function() {
     $servicesPromoSlider.slick('slickSetOption', 'autoplay', true, true);

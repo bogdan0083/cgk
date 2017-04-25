@@ -8,6 +8,7 @@
     min-height: 600px
   +rmin($screen-md)
     min-height: 950px
+    margin-bottom: -50px
   &-svg
     position: absolute
     left: 50%
@@ -20,8 +21,10 @@
       display: block
     +rmin($screen-md)
       display: block
-      top: -212px
+      top: -200px
       width: 1321px
+    +rmin(1132px)
+      top: -214px
     svg
       display: block
       width: 100%
@@ -281,8 +284,24 @@
 /* start steps */
 .steps
   text-align: center
-  padding: 10px 30px
+  padding: 10px 10px
   background-color: #ededed
+  .button
+    max-width: 296px
+    height: 58px
+    line-height: 56px
+    border-color: $color-red
+    background-color: $color-red
+    color: white
+    margin-top: 60px
+    margin-bottom: 50px
+    +rmin($screen-sm)
+      margin-bottom: 10px
+    &:hover
+      background-color: #272727
+      border-color: #272727
+      span
+        color: white
   +rmin($screen-sm)
     background: url(../images/steps-bg.jpg) center / cover
     padding-top: 40px
@@ -295,7 +314,8 @@
       max-width: 1500px
       width: auto
 .steps-item
-  width: 240px
+  max-width: 240px
+  width: 100%
   display: inline-block
   vertical-align: top
   margin: 40px 10px
@@ -384,7 +404,7 @@
       top: -14px
       left: 0
       display: none
-      z-index: 10
+      z-index: 22
       +rmin($screen-sm)
         display: block
   &-tabs
@@ -397,6 +417,16 @@
       padding: 0
     +rmin($screen-md)
       &:nth-child(1)
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          right: 0
+          top: 0
+          background-color: #e6e6e6
+          width: 1px
+          height: 100%
+          z-index: 20
         .packages-types .wrapper,
         .packages-tabs-slider
           float: right
@@ -407,7 +437,7 @@
         .packages-tabs-slider
           float: left
           width: 100%
-          padding-left: 40px
+          padding-left: 80px
   &-tabs-slider
     +rmin($screen-md)
       max-width: 580px
@@ -944,7 +974,7 @@
 /* start news */
 .news
   text-align: center
-  padding: 40px 0
+  padding: 40px 0 70px
   .container
     max-width: 1430px
     margin: 0 auto
@@ -1533,6 +1563,25 @@
   color: white
   padding: 50px 0 60px
   text-align: center
+  .mailto
+    display: inline-block
+    position: relative
+    text-decoration: none
+    &:hover
+      &:after
+        display: none
+    span
+      position: relative
+      z-index: 1
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 3px
+      width: 100%
+      background-color: white
+      opacity: .4
+      height: 1px
   +rmin($screen-sm)
     background: #b70d13 url(../images/questions-bg.jpg) no-repeat center / cover
     padding-top: 60px
@@ -1549,18 +1598,30 @@
     margin: 40px 0
     +rmin($screen-sm)
       display: inline-block
-      margin-left: 40px
-      margin-right: 40px
+      margin-left: 0
+      margin-right: 0
+      width: 300px
     +rmin($screen-md)
-      margin-left: 80px
-      margin-right: 80px
+      width: 400px
+      position: relative
+      &:after
+        content: ''
+        right: 0
+        top: 30px
+        background-color: white
+        height: 133px
+        width: 1px
+        position: absolute
+        opacity: .45
+      &:last-of-type:after
+        display: none
     .icon
-      width: 72px
-      height: 72px
+      width: 140px
+      height: 140px
       position: relative
       background-color: white
       border-radius: 50%
-      margin: 0 auto
+      margin: 0 auto 8px
       svg
         position: absolute
         margin: auto
@@ -1568,14 +1629,15 @@
         bottom: 0
         left: 0
         right: 0
-        width: 19px
+        width: 30px
+        height: 30px
     .text
       margin: 10px 0 -4px
       font-size: 18px
       opacity: .8
       &-large
         font-size: 26px
-        +exo(600)
+        +exo(400)
 /* end questions */
 
 /* start about-slider: */
@@ -1753,6 +1815,10 @@
   margin: 40px 20px
   display: inline-block
   position: relative
+  vertical-align: top
+  width: 155px
+  height: 215px
+  border: 1px solid #d0d0d0
   +rmin($screen-md)
     margin-left: 60px
     margin-right: 60px
@@ -1772,7 +1838,14 @@
     display: block
     filter: grayscale(100%)
     transition: all 0.3s
-    border: 1px solid #d0d0d0
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    max-width: 98%
+    max-height: 98%
   .icon
     width: 50px
     height: 50px
@@ -1794,3 +1867,468 @@
       margin: auto
       path
         transition: all 0.3s
+
+.service-mega-block
+  +rmin($screen-sm)
+    background: url(../images/service-bg1.jpg) no-repeat center / cover
+    min-height: 595px
+  .container
+    padding: 0
+    +rmin($screen-sm)
+      padding-left: 15px
+      padding-right: 15px
+
+.order-action-inner
+  padding: 20px 10px 30px
+  position: relative
+  +rmin($screen-sm)
+    margin-top: 100px
+  &:before
+    content: ''
+    position: absolute
+    width: 3000px
+    left: -2990px
+    height: 100%
+    top: 0
+    background-color: #b70d13
+  .section-heading
+    +rmin($screen-sm)
+      font-size: 31px
+      margin-top: 16px
+  p
+    opacity: .8
+    +rmin($screen-sm)
+      width: 350px
+      font-size: 19px
+  .input-centered
+    +rmin($screen-sm)
+      text-align: left
+  +rmin($screen-sm)
+    min-height: 390px
+    max-width: 588px
+    text-align: left
+    .wrapper
+      max-width: 470px
+
+.layout-service
+  padding-top: 10px
+  .container
+    position: relative
+    .layout-heading
+      +rmin($screen-sm)
+        max-width: 80%
+        margin-left: auto
+        margin-right: auto
+
+.link-back
+  position: relative
+  padding-left: 40px
+  text-decoration: none
+  position: absolute
+  right: 15px
+  top: 47px
+  display: none
+  +rmin($screen-sm)
+    display: block
+  &:hover
+    span
+      opacity: 1
+  span
+    opacity: .5
+    transition: all 0.3s
+  &:hover:before
+    opacity: 0
+  &:hover:after
+    opacity: 1
+  &:after, &:before
+    content: ''
+    width: 30px
+    height: 30px
+    background: white url(../images/arr-right.png) no-repeat center
+    position: absolute
+    top: 50%
+    margin-top: -15px
+    left: 0
+    transform: scale(-1)
+    transition: all 0.3s
+    z-index: 1
+    border-radius: 50%
+    // box-shadow: 0 5px 2px rgba(234, 234, 234, 0.75)
+    border: 1px solid #bdbdbd
+  &:before
+    opacity: 1
+  &:after
+    opacity: 0
+    background-image: url(../images/arr-right-hover.png)
+
+/* start service-dark-desc */
+.service-dark-desc
+  background-color: #272727
+  color: white
+  overflow: hidden
+  text-align: center
+  padding: 40px 0 60px
+  line-height: 1.5
+  .container
+    max-width: 1060px
+    width: 100%
+    margin: 0 auto
+  .heading
+    font-size: 23px
+    font-weight: 400
+    line-height: 1.4
+    position: relative
+    padding-bottom: 30px
+    margin-bottom: 40px
+    &.aos-animate:after
+      width: 185px
+      opacity: 1
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      opacity: 0
+      bottom: 0
+      width: 3px
+      height: 3px
+      background-color: #767676
+      transform: translateX(-50%)
+      transition: all 0.6s .6s
+
+/* end service-dark-desc */
+
+.gray
+  color: #b3b3b3
+
+.dark
+  color: #636363
+
+.small
+  font-size: 14px
+  +rmin($screen-sm)
+    font-size: 15px
+
+.static-content
+  line-height: 1.5
+  padding: 20px 0
+  .container
+    max-width: 1280px
+    width: 100%
+    margin: 0 auto
+
+.table-responsive
+  width: 100%
+  overflow: auto
+  margin: 20px 0
+
+.custom-table
+  min-width: 600px
+  width: 100%
+  border-collapse: collapse
+  +rmin($screen-sm)
+    min-width: 100%
+  thead th
+    opacity: .6
+    text-align: left
+    padding: 10px 0 20px
+    border: none
+    border-bottom: 3px solid #6d6d6d
+    font-weight: 400
+    +rmin($screen-md)
+      padding: 10px 10px 20px
+    &:first-child
+      +rmin($screen-md)
+        padding-left: 45px
+      span
+        border-left: 0
+    span
+      position: relative
+      line-height: 1
+      display: inline-block
+      +rmin($screen-md)
+        padding-left: 20px
+        border-left: 1px solid rgba(black, 0.6)
+  td
+    text-align: left
+    vertical-align: middle
+    border: none
+    +rmin($screen-sm)
+      vertical-align: top
+  > tbody > tr
+    &:not(:last-child)
+      border-bottom: 1px solid #e5e5e5
+    > td
+      padding: 20px 0 20px 0
+      +rmin($screen-sm)
+        padding-top: 30px
+        padding-bottom: 30px
+      span
+        display: block
+        border-bottom: 1px solid #e9e9e9
+        padding: 10px 0
+        font-size: 15px
+        color: rgba(black, .8)
+        +rmin($screen-md)
+          padding-left: 30px
+        &:first-child
+          padding-top: 0
+        &:last-child
+          border-bottom: 0
+          padding-bottom: 0
+      &:first-child
+        width: 200px
+        padding-right: 20px
+        +rmin($screen-sm)
+          width: 400px
+          padding-right: 40px
+        +rmin($screen-md)
+          width: 500px
+          padding-left: 66px
+      &:last-child
+        width: 80px
+        text-align: center
+        color: rgba(black, .8)
+        +rmin($screen-md)
+          width: 150px
+          text-align: left
+          padding-left: 30px
+    &:hover
+      background-color: #f7f7f7
+      > td:first-child
+        color: $color-red
+
+
+.plan-for
+  text-align: center
+  padding: 30px 0
+  background-color: #f1f1f1
+  .container
+    max-width: 1280px
+    width: 100%
+    margin: 0 auto
+  .section-heading
+    margin-bottom: 2px
+  p
+    margin: 0
+    padding-bottom: 30px
+    +exo(400)
+    &.aos-animate:after
+      width: 185px
+      opacity: 1
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      opacity: 0
+      bottom: 0
+      width: 3px
+      height: 3px
+      background-color: $color-red
+      transform: translateX(-50%)
+      transition: all 0.6s .6s
+    +rmin($screen-sm)
+      font-size: 23px
+      line-height: 1.4
+  &-item
+    text-align: center
+    width: 49%
+    vertical-align: top
+    display: inline-block
+    margin: 50px 0
+    padding: 0 10px
+    position: relative
+    +rmin($screen-sm)
+      width: 240px
+      margin: 20px
+    +rmin($screen-md)
+      margin-top: 40px
+      margin-bottom: 40px
+      width: 300px
+      margin-left: 0
+      margin-right: 0
+      font-size: 17px
+      &:nth-child(4),
+      &:last-child
+        &:after
+          display: none
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 40px
+        background-color: #cecece
+        height: 56px
+        width: 1px
+    .circle
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      background-color: $color-red
+      line-height: 60px
+      margin: 0 auto 20px
+      color: white
+      font-size: 14px
+      +exo(500)
+    .text-gray, .text
+      margin: 2px 0
+      line-height: 1.28
+    .text-gray
+      color: #232323
+
+
+.other-services
+  padding: 30px 0
+  text-align: center
+  +rmin($screen-sm)
+    padding-bottom: 80px
+  .container
+    max-width: 1680px
+    width: auto
+
+.layout-services
+  .container
+    max-width: 1715px
+    width: 100%
+    margin: 0 auto
+
+.services-block-group
+  text-align: center
+
+.service-block-item
+  max-width: 335px
+  margin: 12px auto
+  display: inline-block
+  text-align: left
+  border: 3px solid transparent
+  text-decoration: none
+  transition: all 0.3s
+  vertical-align: top
+  &:hover
+    border: 3px solid $color-red
+    .bottom
+      background-color: #fdf0f1
+      &:before
+        transition-delay: 0s
+        transform: translateX(100px)
+      span
+        transition: all 0.3s 0.3s
+        opacity: 1
+  .wrapper
+    padding: 8px
+  .content
+    padding-left: 30px
+    padding-right: 20px
+    padding-bottom: 20px
+  h4
+    font-size: 22px
+    line-height: 1.2
+    color: #010101
+    font-weight: 400
+    margin-bottom: 16px
+  .text
+    font-size: 18px
+    line-height: 1.33
+    opacity: .8
+    margin-top: 0
+    margin-bottom: 0
+    height: 94px
+    overflow: hidden
+  .service-img
+    height: 195px
+    width: 100%
+  .bottom
+    height: 70px
+    line-height: 70px
+    transition: all 0.3s
+    position: relative
+    padding-left: 40px
+    span
+      opacity: 0
+      transition: all 0.3s
+      color: $color-red
+    &:before
+      content: ''
+      width: 30px
+      height: 30px
+      background: white url(../images/arr-right.png) no-repeat center
+      position: absolute
+      top: 50%
+      margin-top: -15px
+      left: 40px
+      transition: all 0.3s
+      z-index: 1
+      border-radius: 50%
+      border: 1px solid #bdbdbd
+      transition: all 0.3s 0.3s
+    &:after
+      content: ''
+      position: absolute
+      height: 1px
+      left: 40px
+      width: 164px
+      background-color: #f3f3f3
+/* start pagination */
+.pagination
+  border-radius: 50px
+  border: 1px solid #bdbdbd
+  display: block
+  height: 49px
+  line-height: 44px
+  position: relative
+  min-width: 220px
+  text-align: center
+  margin: 50px auto 0
+  max-width: 230px
+  .nums
+    display: inline-block
+    vertical-align: middle
+    margin-left: 14px
+    margin-right: 14px
+    padding-left: 10px
+    padding-right: 10px
+    position: relative
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      width: 1px
+      height: 26px
+      margin-top: -13px
+      background-color: black
+      opacity: .3
+    &:after
+      right: 0
+      left: auto
+  .num
+    padding: 0 10px
+    display: inline-block
+    vertical-align: top
+    color: #646464
+  .arr-left, .arr-right
+    background-color: red
+    border: none
+    position: relative
+    z-index: 10
+    cursor: pointer
+    display: inline-block
+    width: 27px
+    height: 27px
+    background: url(../images/arr-left-dark.png) no-repeat center
+    opacity: .4
+    transition: all 0.3s
+    vertical-align: middle
+    &:hover
+      opacity: 1
+    &.slick-disabled
+      opacity: .7
+      cursor: normal
+    &:focus
+      outline: none
+  .arr-right
+    background-image: url(../images/arr-right-dark.png)
+/* end pagination */
+
+.layout-services
+  +rmin($screen-sm)
+    padding-bottom: 40px

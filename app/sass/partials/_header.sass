@@ -63,6 +63,7 @@
     z-index: 2
     +rmin($screen-sm)
       float: left
+      text-align: left
   &-right
     z-index: 2
     +rmin($screen-sm)
@@ -146,7 +147,7 @@
         background-color: #e1e1e1
         width: 1px
         height: 16px
-        margin-top: -8px
+        margin-top: -12px
       &:hover
         color: $color-red
     .left
@@ -223,6 +224,8 @@
   display: inline-block
   margin-left: 3px
   margin-right: 3px
+  &:focus
+    outline: none
   &:hover
     border-color: $color-red
   svg
@@ -232,3 +235,82 @@
     bottom: 0
     left: 0
     right: 0
+
+.submenu
+  background-color: #f8f8f8
+  text-align: center
+  margin-bottom: -20px
+  +rmin($screen-sm)
+    margin-bottom: 0
+  .separator
+    display: none
+    +rmin($screen-md)
+      display: block
+      width: 100%
+      height: 1px
+      margin-top: -1px
+      background-color: #ececec
+  a
+    display: inline-block
+    width: 49%
+    font-size: 15px
+    text-align: center
+    padding-left: 5px
+    padding-right: 5px
+    vertical-align: middle
+    line-height: 1.3
+    text-decoration: none
+    padding: 20px 10px
+    color: #484848
+    transition: all 0.3s
+    +rmin($screen-sm)
+      display: inline-block
+      width: auto
+      padding-left: 10px
+      padding-right: 10px
+    +rmin($screen-md)
+      padding-left: 20px
+      padding-right: 20px
+      font-size: 15px
+      padding-bottom: 0
+      &:hover, &.active
+        span:after
+          width: 100%
+          opacity: 1
+      span
+        display: inline-block
+        padding-bottom: 20px
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          left: 50%
+          opacity: 0
+          bottom: 0
+          width: 3px
+          height: 3px
+          background-color: $color-red
+          transform: translateX(-50%)
+          transition: all 0.3s
+    +rmin(1500px)
+      padding-left: 36px
+      padding-right: 36px
+      font-size: 17px
+      position: relative
+      &:nth-child(6),
+      &:last-child
+        &:after
+          display: none
+      &:after
+        content: ''
+        height: 16px
+        top: 50%
+        margin-top: -8px
+        width: 1px
+        height: 16px
+        background-color: black
+        opacity: .16
+        position: absolute
+        right: 0
+    &:hover, &.active
+      color: $color-red

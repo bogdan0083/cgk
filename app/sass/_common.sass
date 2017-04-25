@@ -46,9 +46,11 @@ h1, h2, h3, h4, h5, h6
 
 .layout-heading
   text-align: center
+  text-transform: uppercase
+  margin-top: 40px
   +rmin($screen-md)
     font-size: 43px
-    text-transform: uppercase
+    margin-bottom: 30px
 .out
   overflow: hidden
   position: relative
@@ -62,6 +64,7 @@ h1, h2, h3, h4, h5, h6
 .mobile-trigger-wrap
   display: inline-block
   float: right
+  cursor: pointer
 
 .mobile-trigger
   +burger(30px, 3px, 6px, #f10c28)
@@ -73,7 +76,7 @@ h1, h2, h3, h4, h5, h6
   height: 51px
   line-height: 48px
   display: inline-block
-  border-radius: 30px
+  border-radius: 60px
   border: 1px solid #919191
   width: 252px
   text-decoration: none

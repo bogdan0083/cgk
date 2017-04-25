@@ -1,0 +1,362 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Popups'
+  - var n = 0
+  - var i = 0
+  - var servicesTextArr = ['Технический <br/> план', 'Межевой<br/>план', 'Акт<br/> обследования', 'Выписки<br/> из ЕГРН', 'Геодезическая<br/> съемка и обмеры', 'Схема расположения<br/>земельного участка', 'Исправление<br/> реестровых ошибок', 'Проектная<br/> документация', ' Кадастровый учет<br/> и регистрация прав', 'Юридические<br/> услуги']
+  - var worktypesTextArr = ['Земельные <br/> участки', 'Здания <br/> и сооружения', 'Нежилые <br/> помещения', 'Квартиры <br/> и комнаты',  'Юридические <br/> услуги']
+block header
+  - var headerInner = true
+  - var active = 1
+  - var submenu = true
+  - var submenuActive = 0
+block content
+  // start layout
+  .layout.layout-services
+    .container
+      h1.layout-heading Наши услуги и цены
+      .services-block-group
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb1.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Технический план
+              p.text Документ, необходимый для государственного кадастрового учета объектов капитального строительства
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Межевой план
+              p.text Документ, необходимый для кадастрового учета земельного участка или части земельного участка
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Акт обследования
+              p.text Документ, необходимый для снятия объекта капитального строительства с кадастрового учета
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Выписки из ЕГРН
+              p.text Сведения ЕГРН об объекте, зарегистрированных правах на него, копии документов, содержащихся в реестре
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Юридические услуги
+              p.text Узаконивание перепланировок, подготовка документов, полное сопровождение сделки, консультации
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Геодезическая съемка и обмеры
+              p.text Комплекс работ, в процессе которого выполняется получение данных для составления чертежей, планов, схем
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Схема расположения земельного участка
+              p.text Документ, необходимый для формирования нового земельного участка на кадастровом плане территории
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Исправление реестровых ошибок
+              p.text Работы, направленные для устранения ошибок в сведениях ЕГРН и документах, на основании которых сведения были внесены в базу
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Проектная документация
+              p.text Документы, необходимые для узаконивания перепланировок либо переустройств объектов капитального строительства
+          .bottom
+            span Подробнее
+        a.service-block-item(href="#")
+          .wrapper
+            .service-img(style="background: url(../images/service-thumb2.jpg) no-repeat center / cover")
+            .content
+              h4.service-item-heading Кадастровый учет и регистрация прав
+              p.text Комплекс мероприятий для постановки объектов на учет, внесение изменений в сведения ЕГРН, регистрации прав и обременений 
+          .bottom
+            span Подробнее
+  // end layout
+  // start questions
+  .questions
+    .container
+      h2.section-heading Если у Вас возникли вопросы,
+      p касающихся кадастровых работ, вы можете обратиться к нам
+      .questions-block
+        .icon
+          include data/phone.svg
+        .text по телефону
+        .text-large +7 (495) 643 85 88
+      .questions-block
+        .icon
+          include data/envelope.svg
+        .text по электронной почте
+        .text-large 
+          a.mailto(href="mailto:info@cntgeo.ru")
+            span info@cntgeo.ru
+  // end questions
+  // start projects
+  section.projects
+    .projects-images(data-aos="fade" data-aos-anchor='.projects' data-aos-delay="600" data-aos-duration="1000")
+      .image-wrapper
+        .projects-image(style="background: url(images/project1.jpg) no-repeat center / cover")
+      .image-wrapper
+        .projects-image(style="background: url(images/project2.jpg) no-repeat center / cover")
+      .image-wrapper
+        .projects-image(style="background: url(images/project3.jpg) no-repeat center / cover")
+      .image-wrapper
+        .projects-image(style="background: url(images/project4.jpg) no-repeat center / cover")
+      .image-wrapper
+        .projects-image(style="background: url(images/project5.jpg) no-repeat center / cover")
+    .projects-showcase(data-aos="fade" data-aos-anchor='.projects' data-aos-duration="1000" data-aos-delay="500")
+      .inner
+        h2.section-heading(data-aos="fade-up" data-aos-anchor='.projects' data-aos-duration="1000") Реализованные проекты
+        .showcase-navigation(data-aos="fade" data-aos-anchor='.projects' data-aos-delay="300" data-aos-duration="1000")
+          a.active(href="#" role="button")
+            span 01
+          a(href="#" role="button")
+            span 02
+          a(href="#" role="button")
+            span 03
+          a(href="#" role="button")
+            span 04
+          a(href="#" role="button")
+            span 05
+        .projects-slider
+          .slide
+            h3.projects-name Кадастровый учет здания
+            p.projects-address по адресу: г. Москва, ул. Можайский вал, д. 8
+            .text Подготовка технического плана в связи с постановкой на государственный кадастровый учет нежилого здания, расположенного. В ходе кадастровых работ были определены координаты характерных точек здания, подготовлены техническое заключение о состоянии несущих конструкций и перекрытий и проект перепланировки объекта, а также изготовлен технический план здания для постановки на государственный кадастровый учет
+            a.button.button-dark.projects-link(href="https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf" target="_blank")
+              span Открыть проект в PDF
+              span.icon 
+                include data/doc.svg
+            .projects-circles
+              .projects-circle.js-circle(
+                data-circle-value="107"
+                data-circle-max-value="365")
+                .wrap
+                  span.num 0
+                  span.caption дней
+              .projects-circle.js-circle(
+                data-circle-value="19"
+                data-circle-max-value="24")
+                .wrap
+                  span.num 0
+                  span.caption ч
+              .projects-circle.js-circle(
+                data-circle-value="22"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption мин 
+              .projects-circle.js-circle(
+                data-circle-value="14"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption сек
+          .slide
+            h3.projects-name() Кадастровый учет здания
+            p.projects-address по адресу: г. Москва, ул. Можайский вал, д. 8
+            .text Мало текста!
+            a.button.button-dark.projects-link(href="https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf" target="_blank")
+              span Открыть проект в PDF
+              span.icon 
+                include data/doc.svg
+            .projects-circles
+              .projects-circle.js-circle(
+                data-circle-value="107"
+                data-circle-max-value="365")
+                .wrap
+                  span.num 0
+                  span.caption дней
+              .projects-circle.js-circle(
+                data-circle-value="19"
+                data-circle-max-value="24")
+                .wrap
+                  span.num 0
+                  span.caption ч
+              .projects-circle.js-circle(
+                data-circle-value="22"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption мин 
+              .projects-circle.js-circle(
+                data-circle-value="14"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption сек
+          .slide
+            h3.projects-name() Кадастровый учет здания
+            p.projects-address по адресу: г. Москва, ул. Можайский вал, д. 8
+            .text Подготовка технического плана в связи с постановкой на государственный кадастровый учет нежилого здания, расположенного. В ходе кадастровых работ были определены координаты характерных точек здания, подготовлены техническое заключение о состоянии несущих конструкций и перекрытий и проект перепланировки объекта, а также изготовлен технический план здания для постановки на государственный кадастровый учет
+            a.button.button-dark.projects-link(href="https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf" target="_blank")
+              span Открыть проект в PDF
+              span.icon 
+                include data/doc.svg
+            .projects-circles
+              .projects-circle.js-circle(
+                data-circle-value="107"
+                data-circle-max-value="365")
+                .wrap
+                  span.num 0
+                  span.caption дней
+              .projects-circle.js-circle(
+                data-circle-value="19"
+                data-circle-max-value="24")
+                .wrap
+                  span.num 0
+                  span.caption ч
+              .projects-circle.js-circle(
+                data-circle-value="22"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption мин 
+              .projects-circle.js-circle(
+                data-circle-value="14"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption сек
+          .slide
+            h3.projects-name() Кадастровый учет здания
+            p.projects-address по адресу: г. Москва, ул. Можайский вал, д. 8
+            .text Подготовка технического плана в связи с постановкой на государственный кадастровый учет нежилого здания, расположенного. В ходе кадастровых работ были определены координаты характерных точек здания, подготовлены техническое заключение о состоянии несущих конструкций и перекрытий и проект перепланировки объекта, а также изготовлен технический план здания для постановки на государственный кадастровый учет
+            a.button.button-dark.projects-link(href="https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf" target="_blank")
+              span Открыть проект в PDF
+              span.icon 
+                include data/doc.svg
+            .projects-circles
+              .projects-circle.js-circle(
+                data-circle-value="107"
+                data-circle-max-value="365")
+                .wrap
+                  span.num 0
+                  span.caption дней
+              .projects-circle.js-circle(
+                data-circle-value="19"
+                data-circle-max-value="24")
+                .wrap
+                  span.num 0
+                  span.caption ч
+              .projects-circle.js-circle(
+                data-circle-value="22"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption мин 
+              .projects-circle.js-circle(
+                data-circle-value="14"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption сек
+          .slide
+            h3.projects-name() Кадастровый учет здания
+            p.projects-address по адресу: г. Москва, ул. Можайский вал, д. 8
+            .text Подготовка технического плана в связи с постановкой на государственный кадастровый учет нежилого здания, расположенного. В ходе кадастровых работ были определены координаты характерных точек здания, подготовлены техническое заключение о состоянии несущих конструкций и перекрытий и проект перепланировки объекта, а также изготовлен технический план здания для постановки на государственный кадастровый учет
+            a.button.button-dark.projects-link(href="https://www.cca.edu/sites/default/files/pdf/08/word-to-pdf.pdf" target="_blank")
+              span Открыть проект в PDF
+              span.icon 
+                include data/doc.svg
+            .projects-circles
+              .projects-circle.js-circle(
+                data-circle-value="107"
+                data-circle-max-value="365")
+                .wrap
+                  span.num 0
+                  span.caption дней
+              .projects-circle.js-circle(
+                data-circle-value="19"
+                data-circle-max-value="24")
+                .wrap
+                  span.num 0
+                  span.caption ч
+              .projects-circle.js-circle(
+                data-circle-value="22"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption мин 
+              .projects-circle.js-circle(
+                data-circle-value="14"
+                data-circle-max-value="60")
+                .wrap
+                  span.num 0
+                  span.caption сек
+  // end projects
+  // start news
+  .news
+      .container
+        h2.section-heading(data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".team") Новости
+        .row
+          .col-xs-12.col-sm-4.col-md-4
+            // start news-item
+            a.news-item(href="#")
+              .date
+                .date-month 11
+                .date-day 01
+              h4.news-item-title Росреестр прекратил прием и выдачу электронных документов
+              .news-item-text С 01.01.2017 года на сайте Росреестра проводятся работы по актуализации контента подразделов. В связи с этим прием и выдача электронных... Очень много текста!
+            // end news-item
+          .col-xs-12.col-sm-4.col-md-4
+            // start news-item
+            a.news-item(href="#")
+              .date
+                .date-month 11
+                .date-day 01
+              h4.news-item-title Росреестр прекратил прием и выдачу электронных документов
+              .news-item-text С 01.01.2017 года на сайте Росреестра проводятся работы по актуализации контента подразделов. В связи с этим прием и выдача электронных...
+            // end news-item
+          .col-xs-12.col-sm-4.col-md-4
+            // start news-item
+            a.news-item(href="#")
+              .date
+                .date-month 11
+                .date-day 01
+              h4.news-item-title Росреестр прекратил прием и выдачу электронных документов
+              .news-item-text С 01.01.2017 года на сайте Росреестра проводятся работы по актуализации контента подразделов. В связи с этим прием и выдача электронных...
+            // end news-item
+        a.button(href="#")
+          span Все новости
+  // end news
+  // start map-wrapper
+  .map-wrapper 
+    .google-map#map
+  // end map-wrapper
+  // start worktypes
+  section.worktypes
+    .container
+      .worktypes-group
+        while i < 5
+          a.worktypes-item(href="#" data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="600" data-aos-delay=(i * 300))
+            .icon
+              img(src='images/worktype-icon' + (i + 1) +'.png' alt="Типы работ " + i)
+            p.text!= worktypesTextArr[i]
+          - i++
+  // end worktypes
