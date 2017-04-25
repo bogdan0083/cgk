@@ -2944,6 +2944,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f8f8f8;
   text-align: center;
   margin-bottom: -20px;
+  position: relative;
+}
+
+.submenu:before {
+  content: '';
+  height: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(top, #e7e7e7, transparent);
+  background: linear-gradient(to bottom, #e7e7e7, transparent);
+  position: absolute;
 }
 
 .submenu .separator {
@@ -5270,6 +5282,28 @@ h1, h2, h3, h4, h5, h6 {
 .static-content {
   line-height: 1.5;
   padding: 20px 0;
+  font-size: 18px;
+  color: #373737;
+}
+
+.static-content a {
+  text-decoration: none;
+  color: #de0c14;
+}
+
+.static-content a:hover {
+  text-decoration: underline;
+}
+
+.static-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.static-content li:before {
+  content: '•  ';
+  color: #de0c14;
+  margin-right: 6px;
 }
 
 .static-content .container {
@@ -6240,6 +6274,30 @@ h1, h2, h3, h4, h5, h6 {
   }
   .small{
     font-size: 15px;
+  }
+  .static-content{
+    padding-bottom: 50px;
+  }
+  .static-content h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .static-content h2{
+    font-size: 35px;
+    margin-bottom: 17px;
+  }
+  .static-content h3{
+    font-size: 31px;
+    margin-bottom: 15px;
+  }
+  .static-content h4{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .static-content h5{
+    font-size: 19px;
+    font-weight: 400;
   }
   .custom-table{
     min-width: 100%;

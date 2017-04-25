@@ -2011,10 +2011,43 @@
 .static-content
   line-height: 1.5
   padding: 20px 0
+  font-size: 18px
+  color: #373737
+  +rmin($screen-sm)
+    padding-bottom: 50px
+  a
+    text-decoration: none
+    color: $color-red
+    &:hover
+      text-decoration: underline
+  ul
+    list-style: none
+    padding: 0
+  li:before
+    content: '•  '
+    color: $color-red
+    margin-right: 6px
   .container
     max-width: 1280px
     width: 100%
     margin: 0 auto
+  +rmin($screen-sm)
+    h1
+      font-size: 40px
+      margin-bottom: 20px
+    h2
+      font-size: 35px
+      margin-bottom: 17px
+    h3
+      font-size: 31px
+      margin-bottom: 15px
+    h4
+      font-size: 24px
+      font-weight: 400
+      margin-bottom: 10px
+    h5
+      font-size: 19px
+      font-weight: 400
 
 .table-responsive
   width: 100%

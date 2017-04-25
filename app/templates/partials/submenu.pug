@@ -1,13 +1,24 @@
 - var submenuArr = ['Технический план', 'Межевой план', 'Акт обследования', 'Выписки из ЕГРН', 'Геодезическая съемка и обмеры', 'Схема расположения земельного участка', 'Исправление реестровых ошибок', 'Проектная документация', 'Кадастровый учет и регистрация прав', 'Юридические услуги']
+- var submenuArrSecondary = ['Земельные участки', 'Здания и сооружения', 'Нежилые помещения', 'Квартиры и комнаты', 'Юридические услуги']
+
 nav.submenu
-  for item, idx in submenuArr
-    if (submenuActive == idx)
-      a.active(href="#")
-        span #{item}
-      if (idx == 5)
-        .separator
-    else
-      a(href="#")
-        span #{item}
-      if (idx == 5)
-        .separator
+  if (!submenuSecondary)
+    for item, idx in submenuArr
+      if (submenuActive == idx)
+        a.active(href="#")
+          span #{item}
+        if (idx == 5)
+          .separator
+      else
+        a(href="#")
+          span #{item}
+        if (idx == 5)
+          .separator
+  else
+    for item, idx in submenuArrSecondary
+      if (submenuActive == idx)
+        a.active(href="#")
+          span #{item}
+      else
+        a(href="#")
+          span #{item}

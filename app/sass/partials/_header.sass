@@ -240,6 +240,15 @@
   background-color: #f8f8f8
   text-align: center
   margin-bottom: -20px
+  position: relative
+  &:before
+    content: ''
+    height: 10px
+    width: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(to bottom, #e7e7e7, transparent)
+    position: absolute
   +rmin($screen-sm)
     margin-bottom: 0
   .separator
